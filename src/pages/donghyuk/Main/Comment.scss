@@ -1,0 +1,23 @@
+.commentRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .commentId {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+
+  .commentText {
+    font-size: 15px;
+  }
+
+  .commentDelete {
+    font-size: 16px;
+  }
+
+  .commentHeart {
+    font-size: 18px;
+  }
+}

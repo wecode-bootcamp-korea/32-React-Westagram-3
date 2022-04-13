@@ -3,9 +3,19 @@ import './Comment.scss';
 
 const Comment = ({ nickname, comment }) => {
   return (
-    <li className="article-comment__row">
-      <span className="comment__id">{nickname}</span>
-      <span className="comment__text">{comment}</span>
+    <li className="commentRow">
+      <div className="commentLeft">
+        <span className="commentId">{nickname}</span>
+        <span className="commentText">{comment}</span>
+      </div>
+      <div className="commentRight">
+        <button className="commentDelete">
+          <i className="fas fa-trash-alt" />
+        </button>
+        <button className="commentHeart">
+          <i class="far fa-heart" />
+        </button>
+      </div>
     </li>
   );
 };

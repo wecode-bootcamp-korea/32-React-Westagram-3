@@ -6,7 +6,6 @@ const FeedContent = ({ comments }) => {
   return (
     <>
       <section className="content">
-        nickname
         <div className="content-post">
           <span className="post__id">gel_fos</span>
           <span className="post__text">댕댕이🐶</span>
