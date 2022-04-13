@@ -1,5 +1,15 @@
 import React from 'react';
+import MainFeeds from './MainFeeds';
+import Navbar from '../../../components/Nav/Nav';
+import './Main.scss';
 
-const Main = props => <h1>Main</h1>;
+const Main = props => {
+  return (
+    <>
+      <Navbar />
+      <MainFeeds />
+    </>
+  );
+};
 
 export default Main;

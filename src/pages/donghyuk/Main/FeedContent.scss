@@ -1,0 +1,41 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 18px;
+}
+
+.content-post {
+  display: flex;
+  align-items: center;
+}
+
+.post__id {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.article-comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 18px;
+}
+
+.article-comment__row {
+  display: flex;
+}
+
+.comment__id {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.article-update__time {
+  font-size: 14px;
+  font-weight: bold;
+  color: #989898;
+  margin-left: 18px;
+}

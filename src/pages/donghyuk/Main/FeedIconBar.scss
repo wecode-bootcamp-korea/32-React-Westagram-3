@@ -1,0 +1,28 @@
+.feedIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 54px;
+  padding: 6px 16px;
+
+  .feedIcon-left {
+    button {
+      font-size: 22px;
+      transition: transform 200ms ease-in;
+
+      &:hover {
+        transform: scale(1.1);
+        opacity: 0.7;
+      }
+
+      &:nth-child(3) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .feedIcon-bookmark {
+    font-size: 20px;
+  }
+}
