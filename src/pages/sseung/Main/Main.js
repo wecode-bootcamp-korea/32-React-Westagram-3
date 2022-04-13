@@ -1,5 +1,11 @@
-import React from 'react';
+import Nav from '../../../components/Nav/Nav';
 
-const Main = props => <h1>Main</h1>;
+const Main = () => {
+  return (
+    <>
+      <Nav />
+    </>
+  );
+};
 
 export default Main;
