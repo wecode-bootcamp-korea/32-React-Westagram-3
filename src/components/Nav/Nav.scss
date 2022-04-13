@@ -1,0 +1,72 @@
+.navBar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+
+  .navBar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 975px;
+    height: 60px;
+    background-color: white;
+    padding: 12px 0;
+    margin: auto;
+  }
+
+  .navBar-left,
+  .navBar-center,
+  .navBar-right {
+    display: flex;
+    align-items: center;
+    width: 33%;
+  }
+
+  .navBar-left {
+    justify-content: flex-start;
+  }
+
+  .navBar-center {
+    justify-content: center;
+  }
+
+  .navBar-right {
+    justify-content: flex-end;
+  }
+
+  .navBar-logo {
+    font-size: 24px;
+    margin-right: 12px;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .navBar-verticalBar {
+    width: 1px;
+    height: 24px;
+    border-left: 1px solid black;
+    margin-right: 12px;
+  }
+
+  .navBar-title {
+    font-size: 24px;
+    font-family: 'Lobster', cursive;
+  }
+
+  .navBar-search {
+    padding: 3px 5px;
+
+    &::placeholder {
+      text-align: center;
+      color: #00000080;
+    }
+  }
+
+  .navBar-right {
+    img {
+      width: 24px;
+      height: 24px;
+      margin-left: 12px;
+    }
+  }
+}
