@@ -1,11 +1,5 @@
-import Nav from '../../../components/Nav/Nav';
-
 const Main = () => {
-  return (
-    <>
-      <Nav />
-    </>
-  );
+  return <></>;
 };
 
 export default Main;
