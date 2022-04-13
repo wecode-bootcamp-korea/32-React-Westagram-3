@@ -24,7 +24,7 @@ const Login = () => {
   };
 
   return validation && submitted ? (
-    navigate('/main')
+    navigate('/main-donghyuk')
   ) : (
     <div className="login">
       <header className="login-title">Westagram</header>
