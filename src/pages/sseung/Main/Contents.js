@@ -16,6 +16,7 @@ const Contents = ({
 `)[0];
 
   const [Descrip, setDescrip] = useState(splitDescription);
+
   const [hidden, setHidden] = useState('');
 
   const onMoreDes = () => {
@@ -26,8 +27,6 @@ const Contents = ({
     );
     setHidden('hidden');
   };
-
-  const onMoreComments = () => {};
 
   return (
     <section className="contents_wrap">
@@ -40,39 +39,35 @@ const Contents = ({
       </article>
       <article className="comments_box">
         <ul className="comments_void">
-          {commentList.map((it, index) => {
-            return (
-              <li key={it.id} className="comment">
-                <div>
-                  <span className="comment_id">{it.user}</span>
-                  <span className="commment_text">{it.text}</span>
-                </div>
-                <div>
+          {commentList.map((it, index) => (
+            <li key={it.id} className="comment">
+              <div>
+                <span className="comment_id">{it.user}</span>
+                <span className="commment_text">{it.text}</span>
+              </div>
+              <div>
+                <i
+                  className="fa-solid fa-trash-can remove"
+                  onClick={() => {
+                    onRemoveComment(index);
+                  }}
+                />
+                <label>
                   <i
-                    className="fa-solid fa-trash-can remove"
-                    onClick={() => {
-                      onRemoveComment(index);
-                    }}
+                    className={`${commentLikeClassName(
+                      it.liked
+                    )} fa-heart like`}
+                    onClick={() => onCommentLike(index)}
                   />
-                  <label>
-                    <i
-                      className={`${commentLikeClassName(
-                        it.liked
-                      )} fa-heart like`}
-                      onClick={() => onCommentLike(index)}
-                    />
-                    <input type="checkbox" />
-                  </label>
-                </div>
-              </li>
-            );
-          })}
+                  <input type="checkbox" />
+                </label>
+              </div>
+            </li>
+          ))}
         </ul>
         <div className="comments_all">
           댓글 {commentList.length}개{' '}
-          <span className="commentsMore" onClick={onMoreComments}>
-            모두 보기
-          </span>
+          <span className="commentsMore">모두 보기</span>
         </div>
         <div className="time">21시간 전</div>
       </article>

@@ -22,13 +22,13 @@ const Feed = ({ data }) => {
   const onCommentSubmit = e => {
     e.preventDefault();
     setCommentList([
+      ...commentList.map(item => item),
       {
         id: commentList.length,
         user: '접속아이디',
         text: commentText,
         liked: false,
       },
-      ...commentList.map(item => item),
     ]);
     setCommentText('');
   };
