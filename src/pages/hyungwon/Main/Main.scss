@@ -1,0 +1,157 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+main {
+  background-color: white;
+  margin-top: 80px;
+  top: 80px;
+  width: 935px;
+  display: flex;
+  justify-content: center;
+  .feeds {
+    width: 614px;
+    article {
+      width: 614px;
+      background-color: white;
+      .profile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 40px;
+        padding: 5px;
+        background-color: white;
+        padding: 14px 4px 14px 16px;
+        height: auto;
+        .profile_right {
+          display: flex;
+          align-items: center;
+          width: 10px;
+          .profile_photo {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+          }
+          .profile_name {
+            margin-left: 14px;
+            font-weight: bold;
+          }
+        }
+        .profile_left {
+          padding: 8px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .photo {
+        width: 100%;
+        height: 500px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        img {
+          width: 70%;
+          height: 500px;
+        }
+      }
+      .activity {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4px;
+        .activity_right {
+          .post_heart {
+            width: 35px;
+            margin: 5px;
+            height: 35px;
+            margin: 5px;
+            padding: 4px;
+          }
+          .comment_go {
+            width: 35px;
+            margin: 5px;
+            height: 35px;
+            margin: 5px;
+            padding: 4px;
+          }
+          .share {
+            width: 35px;
+            margin: 5px;
+            height: 35px;
+            margin: 5px;
+            padding: 4px;
+          }
+        }
+        .activity_left {
+          width: 35px;
+          margin: 5px;
+          height: 35px;
+          margin: 5px;
+          padding: 4px;
+        }
+      }
+      .who_likes {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 4px;
+        margin-left: 10px;
+        .who_profile {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+        }
+        .who_like {
+          margin-left: 5px;
+          font-weight: bold;
+          font-size: 14px;
+        }
+      }
+      .commit {
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        padding: 5px;
+        .commit_name {
+          font-weight: bold;
+        }
+        .commit_content {
+          margin-left: 10px;
+        }
+      }
+      // form {
+      //   .add_all_comment {
+      //   }
+      // }
+      .upload_time {
+        // border: 1.5px solid red;
+        font-size: 11px;
+        margin: 12px 8px 8px 15px;
+      }
+      .upload_comment {
+        border-top: 2px solid #fafafa;
+        margin-top: 20px;
+        input {
+          margin: 20px;
+          padding: 10px;
+          width: 517px;
+          border: none;
+          background-color: white;
+          font-size: 15px;
+        }
+        button {
+          color: skyblue;
+        }
+      }
+    }
+  }
+}
