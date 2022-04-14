@@ -1,9 +1,8 @@
 import './Login.scss';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  // 이메일 , 비밀번호 확인
+  // 이메일 , 비밀번호 저장
   const [email, setEamli] = useState('');
   const [password, setPassWord] = useState('');
 
@@ -14,7 +13,7 @@ const Login = () => {
     setPassWord(e.target.value);
   };
 
-  // 아이디 비밀번호 조건
+  // 아이디 비밀번호 검증 조건
 
   const [isActive, setIsActive] = useState(false);
 
