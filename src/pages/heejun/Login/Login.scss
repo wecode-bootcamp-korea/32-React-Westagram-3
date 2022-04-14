@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Indie+Flower&family=Jost:ital@0;1&family=Mitr:wght@300&family=Monoton&family=Nanum+Pen+Script&family=Open+Sans:ital,wght@0,400;0,600;1,500&family=Pacifico&family=Quantico:ital@1&family=Shizuru&family=Vast+Shadow&display=swap');
+
+.Login {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 50px;
+  height: 600px;
+
+  .headerLogo {
+    .logo {
+      font-family: 'Lobster', cursive;
+      font-size: 80px;
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+    }
+  }
+
+  .loginFormWrap {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .idInput,
+    .passwordInput {
+      width: 400px;
+      padding: 15px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+    }
+
+    .password {
+      margin-top: 20px;
+    }
+
+    button {
+      width: 400px;
+      margin-top: 15px;
+      padding: 20px;
+      border: none;
+      border-radius: 3px;
+      background-color: #c0dffd;
+      color: black;
+    }
+    .activeBtn {
+      background-color: #0095f6;
+    }
+    .unactiveBtn {
+      background-color: #c0dffd;
+    }
+  }
+}
+
+.passwordFindWrap {
+  margin-top: 10%;
+
+  .passwordFind {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+  }
+}
