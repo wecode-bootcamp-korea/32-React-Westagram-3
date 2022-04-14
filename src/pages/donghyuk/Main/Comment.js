@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Comment.scss';
 
 const Comment = ({ comment, onDelete }) => {
+  const [heartToggle, setHeartToggle] = useState(false);
+
   const handleDelete = () => {
     onDelete(comment);
+  };
+
+  const handleHeartToggle = () => {
+    setHeartToggle(!heartToggle);
   };
 
   return (
@@ -16,8 +22,12 @@ const Comment = ({ comment, onDelete }) => {
         <button onClick={handleDelete} className="commentDelete">
           <i className="fas fa-trash-alt" />
         </button>
-        <button className="commentHeart">
-          <i className="far fa-heart" />
+        <button onClick={handleHeartToggle} className="commentHeart">
+          {heartToggle ? (
+            <i style={{ color: 'red' }} className="fa-solid fa-heart" />
+          ) : (
+            <i className="far fa-heart" />
+          )}
         </button>
       </div>
     </li>
