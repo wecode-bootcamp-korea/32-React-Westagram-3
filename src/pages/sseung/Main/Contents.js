@@ -13,8 +13,6 @@ const Contents = ({
     return liked ? 'fa-solid' : 'fa-regular';
   };
 
-  // console.log(data);
-
   return (
     <section className="contents_wrap">
       <article className="contents">
@@ -56,7 +54,9 @@ const Contents = ({
             );
           })}
         </ul>
-        <div className="comments_all">댓글 {data.length}개 모두 보기</div>
+        <div className="comments_all">
+          댓글 {data.comments.length}개 모두 보기
+        </div>
         <div className="time">21시간 전</div>
       </article>
       <form className="comment_form" onSubmit={onCommentSubmit}>
