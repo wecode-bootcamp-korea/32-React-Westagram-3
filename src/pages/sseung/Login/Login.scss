@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  --color-bggray: rgb(250, 250, 250);
+  --color--lightgray: rgb(219, 219, 219);
+  --color--gray: #888;
+}
+
+.login {
+  * {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    &:not(h1) {
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    &:link {
+      color: inherit;
+    }
+  }
+
+  .link_blue {
+    color: #0095f6;
+    border: none;
+    background: none;
+    font-weight: bold;
+  }
+
+  body {
+    background-color: #fafafa;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+///
+.login,
+.join {
+  background-color: #fff;
+}
+
+.login_page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.loginNjoin {
+  width: 350px;
+}
+
+.login {
+  border: 1px solid var(--color--lightgray);
+  padding: 20px 40px;
+
+  .logo {
+    font-family: 'Lobster', cursive;
+    padding-bottom: 40px;
+    font-size: 40px;
+  }
+
+  .login_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .input_wrap {
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 10px;
+      border: 1px solid var(--color--lightgray);
+      border-radius: 3px;
+      background-color: #fafafa;
+      font-size: 0.75em;
+      + input {
+        margin-top: 5px;
+      }
+      &::placeholder {
+        border-radius: 5px;
+        color: var(--color--gray);
+      }
+    }
+
+    button {
+      padding: 7px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 3px;
+      // background-color: #B2DFFC;
+      background-color: rgb(0, 149, 246);
+      color: #fff;
+      font-size: 0.9em;
+      font-weight: bold;
+      &:disabled {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  .or {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9em;
+    color: var(--color--gray);
+
+    .line {
+      flex-grow: 1;
+      height: 1px;
+      background-color: var(--color--lightgray);
+    }
+
+    span {
+      position: relative;
+      top: -6px;
+      padding: 0 20px;
+    }
+  }
+
+  .facebook,
+  .forget {
+    display: block;
+    margin-top: 20px;
+    color: #4469a4;
+  }
+
+  .facebook {
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+
+  .forget {
+    font-size: 0.75em;
+  }
+}
+
+.join {
+  margin-top: 10px;
+  border: 1px solid var(--color--lightgray);
+  padding: 20px;
+  text-align: center;
+  font-size: 0.85em;
+
+  a {
+    color: rgb(0, 150, 246);
+    font-weight: bold;
+  }
+}
+
+.app_download {
+  padding: 20px;
+
+  span {
+    font-size: 0.85em;
+  }
+  .appBtn_wrap {
+    margin-top: 20px;
+
+    button {
+      padding: 15px;
+      border: 0;
+      border-radius: 5px;
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
