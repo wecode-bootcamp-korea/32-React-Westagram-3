@@ -6,9 +6,9 @@
     height: 100vh;
   }
 
-  a {
+  span {
     color: black;
-    font-weight: 900;
+    font-weight: 400;
     text-decoration: none;
     font-size: 15px;
   }
@@ -104,6 +104,7 @@
 
         .feed-header-myName {
           margin-left: 10px;
+          font-weight: 800;
         }
       }
 
@@ -144,6 +145,10 @@
           display: flex;
           align-items: center;
           padding: 10px;
+          span {
+            font-size: 15px;
+            font-weight: 600;
+          }
           img {
             width: 25px;
             height: 25px;
@@ -189,7 +194,7 @@
                 background-color: #fafafa;
                 color: #1b8bf5;
                 font-weight: 700;
-                opacity: 0.8;
+                opacity: 0.9;
               }
             }
           }
@@ -222,9 +227,9 @@
           display: flex;
           flex-direction: column;
           span {
-            font-size: 13px;
-            opacity: 0.7;
-            font-weight: 500;
+            margin-bottom: 5px;
+            font-size: 15px;
+            font-weight: 600;
           }
         }
       }
@@ -240,11 +245,10 @@
           margin: 10px;
           span {
             margin-left: 10px;
-            opacity: 0.5;
-            font-weight: 600;
+            font-weight: 800;
             font-size: 13px;
           }
-          a {
+          span {
             font-size: 15px;
             margin-right: 2%;
           }
@@ -267,8 +271,7 @@
             margin-left: 10px;
             span {
               font-size: 13px;
-              opacity: 0.7;
-              font-weight: 500;
+              font-weight: 700;
             }
           }
         }
@@ -284,11 +287,10 @@
           margin: 10px;
           span {
             margin-left: 10px;
-            opacity: 0.5;
             font-weight: 600;
             font-size: 13px;
           }
-          a {
+          span {
             font-size: 15px;
             margin-right: 2%;
           }
@@ -317,8 +319,7 @@
 
               span {
                 margin-left: 2%;
-                opacity: 0.5;
-                font-weight: 600;
+                font-weight: 800;
                 font-size: 12px;
               }
             }
@@ -326,7 +327,7 @@
             .fallow {
               margin-left: 80px;
 
-              a {
+              span {
                 color: #1b8bf5;
                 margin-left: 10px;
               }

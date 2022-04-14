@@ -26,9 +26,7 @@ const Login = () => {
   return (
     <div className="Login">
       <header className="headerLogo">
-        <a className="logo" href="">
-          Westagram
-        </a>
+        <span className="logo">Westagram</span>
       </header>
       <form className="loginFormWrap">
         <input
@@ -55,9 +53,7 @@ const Login = () => {
         </button>
       </form>
       <footer className="passwordFindWrap">
-        <a className="passwordFind" href="">
-          비밀번호를 잊으셨나요 ?
-        </a>
+        <span className="passwordFind">비밀번호를 잊으셨나요 ?</span>
       </footer>
     </div>
   );
