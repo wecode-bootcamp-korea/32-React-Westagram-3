@@ -2,7 +2,7 @@ import React from 'react';
 import Comments from './Comments';
 import './FeedContent.scss';
 
-const FeedContent = ({ comments }) => {
+const FeedContent = ({ comments, onDelete }) => {
   return (
     <>
       <section className="content">
@@ -11,7 +11,7 @@ const FeedContent = ({ comments }) => {
           <span className="post__text">댕댕이🐶</span>
         </div>
       </section>
-      <Comments comments={comments} />
+      <Comments onDelete={onDelete} comments={comments} />
       <span className="article-update__time">11시간전</span>
     </>
   );

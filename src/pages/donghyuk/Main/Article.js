@@ -10,8 +10,13 @@ const Article = props => {
     { id: 0, name: 'gel_fos', text: '덕순이 너무 귀여워요~' },
   ]);
 
-  const handleAdd = text => {
+  const onAdd = text => {
     setComments(prev => [...prev, { id: Date.now(), name: 'gel_fos', text }]);
+  };
+
+  const onDelete = comment => {
+    const newComments = comments.filter(item => item.id !== comment.id);
+    setComments(newComments);
   };
 
   return (
@@ -19,8 +24,8 @@ const Article = props => {
       <img src="/images/donghyuk/덕순1.jpg" alt="" className="article-img" />
       <FeedIconBar />
       <FeedLikeBar />
-      <FeedContent comments={comments} />
-      <AddItemForm onAdd={handleAdd} />
+      <FeedContent onDelete={onDelete} comments={comments} />
+      <AddItemForm onAdd={onAdd} />
     </article>
   );
 };

@@ -2,15 +2,11 @@ import React from 'react';
 import Comment from './Comment';
 import './Comments.scss';
 
-const Comments = ({ comments }) => {
+const Comments = ({ comments, onDelete }) => {
   return (
     <ul className="comments">
       {comments.map(comment => (
-        <Comment
-          key={comment.id}
-          nickname={comment.name}
-          comment={comment.text}
-        />
+        <Comment key={comment.id} onDelete={onDelete} comment={comment} />
       ))}
     </ul>
   );
