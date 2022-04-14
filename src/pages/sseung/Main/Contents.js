@@ -1,4 +1,4 @@
-// import { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const Contents = ({
   data,
@@ -12,17 +12,31 @@ const Contents = ({
   const commentLikeClassName = liked => {
     return liked ? 'fa-solid' : 'fa-regular';
   };
+  const splitDescription = data.description.split(`
+`)[0];
+
+  const [Descrip, setDescrip] = useState(splitDescription);
+  const [hidden, setHidden] = useState('');
+
+  const onMoreDes = () => {
+    setDescrip(
+      data.description
+        .split('\n')
+        .map((line, i) => line || <div key={i}>{line}</div>)
+    );
+    setHidden('hidden');
+  };
+
+  const onMoreComments = () => {};
 
   return (
     <section className="contents_wrap">
       <article className="contents">
         <span className="user_id">{data.userId}</span>
-        <span className="description">
-          {data.description.split('\n').map((line, i) => (
-            <div key={i}>{line}</div>
-          ))}
-        </span>
-        <div className="more_des">더 보기</div>
+        <span className="description">{Descrip}</span>
+        <div className={`more_des ${hidden}`} onClick={onMoreDes}>
+          더 보기
+        </div>
       </article>
       <article className="comments_box">
         <ul className="comments_void">
@@ -55,7 +69,10 @@ const Contents = ({
           })}
         </ul>
         <div className="comments_all">
-          댓글 {data.comments.length}개 모두 보기
+          댓글 {commentList.length}개{' '}
+          <span className="commentsMore" onClick={onMoreComments}>
+            모두 보기
+          </span>
         </div>
         <div className="time">21시간 전</div>
       </article>

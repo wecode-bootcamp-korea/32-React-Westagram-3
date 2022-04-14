@@ -388,6 +388,7 @@ main {
         padding: 0 16px 20px;
         .user_id {
           font-weight: bold;
+          margin-right: 10px;
         }
 
         .more_des {
@@ -451,6 +452,10 @@ main {
             visibility: hidden;
           }
         }
+      }
+
+      .commentsMore {
+        cursor: pointer;
       }
 
       .comment_form {
