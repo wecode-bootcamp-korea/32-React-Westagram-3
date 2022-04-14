@@ -1,7 +1,22 @@
 import './Main.scss';
 import Nav from '../../../components/Nav/Nav';
+import { useState } from 'react';
 
 function Main() {
+  const [conmment, setcomment] = useState('');
+  const [commentArray, setcommentArray] = useState([
+    {
+      id: 0,
+      name: '_heejuun_',
+      text: '안녕하세요',
+    },
+  ]);
+
+  const enterComment = e => {
+    setcomment(e.target.value);
+    console.log(enterComment);
+  };
+
   return (
     <div class="wrap">
       <Nav />
@@ -49,6 +64,7 @@ function Main() {
                   <span className="conmment-plus">더보기</span>
                 </div>
               </div>
+              <ul className="comment-push" />
               <div className="comment-list-wrap" />
               <form className="comment-action-wrap">
                 <input
@@ -57,7 +73,7 @@ function Main() {
                   placeholder="댓글달기..."
                 />
                 <div className="comment-btn">
-                  <button>게시</button>
+                  <button onSubmit={enterComment}>게시</button>
                 </div>
               </form>
             </div>

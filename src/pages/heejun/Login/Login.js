@@ -5,6 +5,8 @@ const Login = () => {
   // 이메일 , 비밀번호 저장
   const [email, setEamli] = useState('');
   const [password, setPassWord] = useState('');
+  // 버튼 활성화 비활성화
+  const [disabled, setDisabled] = useState(true);
 
   const handleIdInput = e => {
     setEamli(e.target.value);
@@ -19,7 +21,7 @@ const Login = () => {
 
   const isPassedLogin = () => {
     return email.includes('@') && password.length > 4
-      ? setIsActive(true)
+      ? (setIsActive(true), setDisabled(false))
       : setIsActive(false);
   };
 
@@ -47,7 +49,7 @@ const Login = () => {
         <button
           type="button"
           className={isActive ? 'activeBtn' : 'unactiveBtn'}
-          disabled
+          disabled={disabled}
         >
           로그인
         </button>
