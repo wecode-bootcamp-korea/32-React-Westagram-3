@@ -383,8 +383,8 @@ main {
       }
     }
 
-    .contents_wrap {
-      .contents {
+    .contents {
+      .contents_wrap {
         padding: 0 16px 20px;
         .user_id {
           font-weight: bold;
@@ -485,9 +485,10 @@ main {
         .comment_post {
           flex-grow: 0;
           font-size: 15px;
-          cursor: auto;
+          cursor: pointer;
           &:disabled {
             opacity: 0.5;
+            cursor: auto;
           }
         }
       }
