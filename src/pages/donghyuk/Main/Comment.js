@@ -24,7 +24,7 @@ const Comment = ({ comment, onDelete }) => {
         </button>
         <button onClick={handleHeartToggle} className="commentHeart">
           {heartToggle ? (
-            <i style={{ color: 'red' }} className="fa-solid fa-heart" />
+            <i style={{ color: '#ff7473' }} className="fa-solid fa-heart" />
           ) : (
             <i className="far fa-heart" />
           )}
