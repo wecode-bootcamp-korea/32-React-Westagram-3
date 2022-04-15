@@ -218,6 +218,10 @@ main {
           @include user_profile($width: 66px, $radius: 33px);
           div {
             border-radius: 30px;
+            overflow: hidden;
+            img {
+              width: 100%;
+            }
           }
         }
 

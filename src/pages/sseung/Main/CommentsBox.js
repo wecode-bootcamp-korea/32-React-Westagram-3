@@ -1,7 +1,6 @@
 import Comment from './Comment';
 
 const CommentsBox = props => {
-  console.log(props);
   const commentLikeClassName = liked => {
     return liked ? 'fa-solid' : 'fa-regular';
   };

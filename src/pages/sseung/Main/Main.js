@@ -89,13 +89,51 @@ const Main = () => {
     },
   ];
 
+  const storyData = [
+    {
+      id: 0,
+      userId: 'AAAAA',
+      imgSrc: 'images/sseung/profile.jpeg',
+    },
+    {
+      id: 2,
+      userId: 'BBBB',
+      imgSrc: 'images/sseung/profile.jpeg',
+    },
+    {
+      id: 3,
+      userId: 'CCCCCCCC',
+      imgSrc: 'images/sseung/profile.jpeg',
+    },
+    {
+      id: 4,
+      userId: 'DDDD',
+      imgSrc: 'images/sseung/profile.jpeg',
+    },
+    {
+      id: 5,
+      userId: 'EEE',
+      imgSrc: 'images/sseung/profile.jpeg',
+    },
+    {
+      id: 6,
+      userId: 'FFFFFF',
+      imgSrc: 'images/sseung/profile.jpeg',
+    },
+    {
+      id: 7,
+      userId: 'GGGGGGGG',
+      imgSrc: 'images/sseung/profile.jpeg',
+    },
+  ];
+
   return (
     <div>
       <Nav />
       <main>
         <div>
           <section className="feeds">
-            <StoriesWrap />
+            <StoriesWrap storyData={storyData} />
             {feedData.map(it => (
               <Feed key={it.id} data={it} />
             ))}
