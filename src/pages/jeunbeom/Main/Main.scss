@@ -1,0 +1,395 @@
+* {
+  box-sizing: border-box;
+}
+
+.navigator {
+  border-bottom: 1px solid lightgray;
+  font-family: 'Lobster', cursive;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .nav-left {
+    display: inline-flex;
+
+    .instagram-img {
+      height: 30px;
+      margin-top: 25%;
+      margin-bottom: 20%;
+      padding-right: 20px;
+    }
+
+    .instagram-word {
+      float: right;
+      margin-top: 20%;
+      padding-left: 20px;
+      margin-bottom: 20%;
+      font-size: 30px;
+      border-left: 1px solid black;
+    }
+  }
+  .nav-center {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    .search {
+      width: 300px;
+      height: 30px;
+      font-size: 15px;
+      display: flex;
+      text-align: center;
+    }
+
+    .fa-magnifying-glass {
+      color: gray;
+      position: absolute;
+      left: 110px;
+      top: 8px;
+    }
+  }
+  .nav-right {
+    display: inline-flex;
+
+    .explore {
+      height: 30px;
+      width: 30px;
+      margin-right: 15px;
+    }
+
+    .heart {
+      height: 30px;
+      width: 30px;
+      margin-right: 15px;
+    }
+
+    .profileicon {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  justify-content: space-evenly;
+  align-items: stretch;
+
+  .bigbox {
+    width: 500px;
+    height: 100%;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: stretch;
+
+    .dog {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+      display: inline-flex;
+    }
+    .id {
+      height: 50px;
+      display: flex;
+      align-items: center;
+
+      .fa-circle {
+        font-size: 30px;
+        margin-left: 15px;
+      }
+      .userid {
+        font-size: 20px;
+        margin-left: 5px;
+      }
+      .dots {
+        margin-left: 330px;
+        font-size: 30px;
+      }
+    }
+    .icons {
+      position: relative;
+      display: block;
+      height: 40px;
+
+      .lefticon {
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        font-size: 20px;
+
+        .fa-comment-dots {
+          margin-left: 5px;
+        }
+
+        .fa-share {
+          margin-left: 5px;
+        }
+      }
+      .righticon {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-size: 20px;
+      }
+    }
+    .likes {
+      margin-top: 10px;
+      height: 40px;
+      position: relative;
+
+      .fa-face-grin-squint {
+        position: absolute;
+        left: 20px;
+        font-size: 20px;
+      }
+
+      .howmanylikes {
+        position: absolute;
+        left: 50px;
+        font-size: 20px;
+      }
+    }
+    .commentbox1 {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      margin: 0;
+      padding: 0;
+      height: 15px;
+
+      .comment1 {
+        font-weight: bold;
+        list-style: none;
+      }
+      .comment2 {
+        padding-left: 10px;
+        display: flex;
+      }
+      .seemore {
+        padding-left: 140px;
+        color: lightgray;
+        font-size: 13px;
+      }
+      .userCommentList {
+        margin: 0;
+      }
+    }
+    .userCommentList {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 65px;
+
+      .commentUserId {
+        font-weight: bold;
+        margin-right: 10px;
+      }
+    }
+
+    .addcomment {
+      position: relative;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      justify-content: center;
+      align-items: stretch;
+      margin-top: 50px;
+      padding: 0;
+
+      .toaddcomment {
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        border: none;
+        border-top: 1px solid lightgray;
+      }
+
+      .add {
+        font-size: 13px;
+        color: lightblue;
+        opacity: 0.8;
+        border: none;
+        background-color: white;
+        margin: 0 auto;
+        position: absolute;
+        right: 5px;
+        top: 15px;
+      }
+    }
+  }
+
+  .main-right {
+    height: 850px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      margin: 0;
+    }
+
+    .idinfo {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .profile {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .house {
+          border-radius: 50%;
+          width: 80px;
+          height: 80px;
+          margin-left: 20px;
+          margin-bottom: 20px;
+        }
+        .profileId {
+          margin-left: 15px;
+          margin-bottom: 20px;
+          font-size: 20px;
+        }
+      }
+    }
+
+    .story {
+      width: 90%;
+      height: 300px;
+      margin-left: 15px;
+      border: 1px solid black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .storyuser {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+        .seestory {
+          margin-left: 10px;
+          margin-top: 10px;
+          color: lightgray;
+          font-size: 13px;
+        }
+
+        .storyseeall {
+          margin-right: 10px;
+          margin-top: 10px;
+          height: 30px;
+          font-size: 13px;
+        }
+      }
+      .friendstory {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+
+        .friend1 {
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          border: 1px solid red;
+          position: absolute;
+          left: 10px;
+        }
+        .yougurtlover {
+          margin-bottom: 10px;
+          padding-bottom: 5px;
+          font-size: 15px;
+          margin-left: -180px;
+        }
+      }
+    }
+    .recommendation {
+      width: 90%;
+      height: 150px;
+      margin-left: 15px;
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid black;
+
+      .recommendationuser {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+        .client {
+          margin-left: 10px;
+          margin-top: 10px;
+          color: lightgray;
+          font-size: 13px;
+        }
+
+        .clientseeall {
+          margin-right: 10px;
+          margin-top: 10px;
+          height: 30px;
+          font-size: 13px;
+        }
+      }
+      .recommenduser {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 40px;
+
+        .cat {
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          margin-left: 10px;
+        }
+
+        .knowuser {
+          font-size: 15px;
+          margin-right: 210px;
+        }
+
+        .follow {
+          color: blue;
+          font-size: 15px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .restriction {
+      width: 90%;
+      height: 80px;
+      margin-left: 15px;
+      margin-top: 15px;
+
+      color: lightgray;
+      opacity: 0.8;
+    }
+    .copyright {
+      width: 90%;
+      height: 20px;
+      margin-left: 15px;
+      margin-top: 15px;
+
+      color: lightgray;
+      opacity: 0.8;
+      font-size: 15px;
+    }
+  }
+}
