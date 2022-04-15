@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import LoginInput from './components/LoginInput';
 
 const LoginWrap = ({ user }) => {
   const [state, setState] = useState({ id: '', pw: '' });
@@ -10,6 +11,23 @@ const LoginWrap = ({ user }) => {
       [e.target.name]: e.target.value,
     });
   };
+
+  const loginInputObj = [
+    {
+      className: 'login_id',
+      name: 'id',
+      type: 'text',
+      placeholder: '아이디(이메일)',
+      onInput: onLogin,
+    },
+    {
+      className: 'login_pw',
+      name: 'pw',
+      type: 'password',
+      placeholder: '비밀번호',
+      onInput: onLogin,
+    },
+  ];
 
   const navigate = useNavigate();
 
@@ -47,22 +65,8 @@ const LoginWrap = ({ user }) => {
       <h1 className="logo">westargram</h1>
       <form className="login_form">
         <div className="input_wrap">
-          <input
-            className="login_id"
-            name="id"
-            type="text"
-            placeholder="아이디(이메일)"
-            autoComplete="off"
-            onInput={onLogin}
-          />
-          <input
-            className="login_pw"
-            name="pw"
-            type="password"
-            placeholder="비밀번호"
-            autoComplete="off"
-            onInput={onLogin}
-          />
+          <LoginInput {...loginInputObj.find(x => x.name === 'id')} />
+          <LoginInput {...loginInputObj.find(x => x.name === 'pw')} />
         </div>
         <button
           className="submit_btn"
