@@ -13,12 +13,12 @@ const LoginWrap = ({ user }) => {
 
   const navigate = useNavigate();
 
+  const idCheck = state.id === user.id;
+  const pwCheck = state.pw === user.pw;
+  const pwMinLength = 4 < state.pw.length && state.pw.length < 16;
+
   const goToMain = e => {
     e.preventDefault();
-    const idCheck = state.id === user.id;
-    const pwCheck = state.pw === user.pw;
-    const includeEmail = state.id.includes('@');
-    const pwMinLength = 7 < state.pw.length && state.pw.length < 16;
 
     if (idCheck && pwCheck) {
       navigate('/main-sseung');
@@ -34,11 +34,8 @@ const LoginWrap = ({ user }) => {
         errorMessage += `비밀번호를 확인하세요`;
       }
 
-      if (!includeEmail) {
-        hintMessage += `아이디가 이메일 형식이 아닙니다.\n`;
-      }
       if (!pwMinLength) {
-        hintMessage += `비밀번호는 8자리 ~ 15자리 입니다.\n`;
+        hintMessage += `비밀번호는 5자리 ~ 15자리 입니다.\n`;
       }
 
       alert(`${errorMessage}!${hintMessage ? '\n\nhint:' : ''}${hintMessage}`);
@@ -54,7 +51,7 @@ const LoginWrap = ({ user }) => {
             className="login_id"
             name="id"
             type="text"
-            placeholder="아이디"
+            placeholder="아이디(이메일)"
             autoComplete="off"
             onInput={onLogin}
           />
@@ -71,7 +68,7 @@ const LoginWrap = ({ user }) => {
           className="submit_btn"
           type="submit"
           onClick={goToMain}
-          disabled={!(state.id && state.pw)}
+          disabled={!(state.id.includes('@') && 4 < state.pw.length)}
         >
           로그인
         </button>
