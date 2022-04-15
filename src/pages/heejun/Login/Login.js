@@ -1,10 +1,20 @@
 import './Login.scss';
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  // 로그인 버튼 클릭시 메인 이동
+
+  const navigate = useNavigate();
+
+  const goToMain = () => {
+    navigate('/main-heejun');
+  };
+
   // 이메일 , 비밀번호 저장
   const [email, setEamli] = useState('');
   const [password, setPassWord] = useState('');
+
   // 버튼 활성화 비활성화
   const [disabled, setDisabled] = useState(true);
 
@@ -45,9 +55,9 @@ const Login = () => {
           type="password"
           placeholder="비밀번호"
         />
-
         <button
-          type="button"
+          onClick={goToMain}
+          type="submit"
           className={isActive ? 'activeBtn' : 'unactiveBtn'}
           disabled={disabled}
         >

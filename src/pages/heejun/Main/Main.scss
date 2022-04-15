@@ -159,12 +159,24 @@
         }
 
         .comment-wrap {
+          li {
+            margin-top: 10px;
+          }
+          .id-value {
+            font-weight: 600;
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+
           .comment {
             margin-left: 10px;
 
             .comment-plus {
               margin-left: 2%;
               opacity: 0.5;
+            }
+            .comment-myname {
+              font-weight: 600;
             }
           }
 

@@ -3,22 +3,29 @@ import Nav from '../../../components/Nav/Nav';
 import { useState } from 'react';
 
 function Main() {
-  const [conmment, setcomment] = useState('');
-  const [commentArray, setcommentArray] = useState([
-    {
-      id: 0,
-      name: '_heejuun_',
-      text: '안녕하세요',
-    },
-  ]);
+  const [conmment, setComment] = useState('');
+  const [conmmentArrary, setCommentArray] = useState([]);
 
-  const enterComment = e => {
-    setcomment(e.target.value);
-    console.log(enterComment);
+  const handleReviewInput = event => {
+    setComment(event.target.value); // 인풋값 계속 리로드
+  };
+
+  const handleTotalEnter = e => {
+    e.preventDefault();
+    //const plusArray = [...conmmentArrary]; // 지금까지 배열을 저장한다.
+    if (conmment !== '') {
+      setCommentArray(prev => [
+        ...prev,
+        { conmment: conmment, id: '_heejun_' },
+      ]);
+      //plusArray.push({ id: '_heejuun_', conmment: conmment }); // 빈 값이 아니면  plusArray에 푸쉬한다.
+      //setCommentArray(plusArray); // 새로운 값으로 저장한다.
+    }
+    setComment(''); // 이미 저장된 댓글은 지운다.
   };
 
   return (
-    <div class="wrap">
+    <div className="wrap">
       <Nav />
       <main className="containerMain">
         <div className="feeds">
@@ -59,21 +66,32 @@ function Main() {
             <div className="comment-wrap">
               <div className="comment">
                 <div>
-                  <span>_heejuun_</span>
+                  <span className="comment-myname">_heejuun_</span>
                   <span> 아르떼 뮤지엄에서 찰칵 📸...</span>
                   <span className="conmment-plus">더보기</span>
                 </div>
               </div>
-              <ul className="comment-push" />
+              <ul className="comment-push">
+                {conmmentArrary.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <span className="id-value">{item.id}</span>
+                      <span className="comment-value">{item.conmment}</span>
+                    </li>
+                  );
+                })}
+              </ul>
               <div className="comment-list-wrap" />
-              <form className="comment-action-wrap">
+              <form className="comment-action-wrap" onSubmit={handleTotalEnter}>
                 <input
                   className="comment-input"
                   type="text"
                   placeholder="댓글달기..."
+                  value={conmment}
+                  onChange={handleReviewInput}
                 />
                 <div className="comment-btn">
-                  <button onSubmit={enterComment}>게시</button>
+                  <button>게시</button>
                 </div>
               </form>
             </div>
