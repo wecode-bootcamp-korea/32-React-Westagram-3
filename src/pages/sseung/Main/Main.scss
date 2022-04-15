@@ -586,6 +586,7 @@ main {
       display: flex;
       justify-content: space-between;
       padding: 8px 0 8px 5px;
+      margin-top: 5px;
     }
 
     .user_profile {
@@ -593,29 +594,31 @@ main {
       align-items: center;
 
       .profile_img {
+        @include user_profile(
+          $width: 32px,
+          $radius: 22px,
+          $padding: 0px,
+          $stroke: 0px
+        );
         margin-right: 12px;
-        width: 32px;
-        height: 32px;
-        background-color: #ddd;
-        border-radius: 16px;
       }
 
-      .user_id_wrap {
-        display: flex;
-        flex-direction: column;
-
-        button {
-          border: none;
-          background: none;
-          text-align: left;
-          font-size: 1em;
-        }
-
-        span {
-          font-size: 0.8em;
-          color: var(--color--gray);
-        }
+      .user_id {
+        padding: 0;
       }
+
+      span {
+        font-size: 0.8em;
+        color: var(--color--gray);
+      }
+    }
+
+    button {
+      border: none;
+      background: none;
+      text-align: left;
+      font-size: 1em;
+      color: var(--color--gray);
     }
   }
 }

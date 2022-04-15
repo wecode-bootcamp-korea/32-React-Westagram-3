@@ -7,6 +7,10 @@ import MainRight from './MainRight';
 import StoriesWrap from './StoriesWrap';
 
 const Main = () => {
+  const userData = {
+    userId: 'mschoise',
+    info: '유저이름',
+  };
   const feedData = [
     {
       id: 0,
@@ -94,36 +98,43 @@ const Main = () => {
       id: 0,
       userId: 'AAAAA',
       imgSrc: 'images/sseung/profile.jpeg',
+      info: 'Instagram 신규 가입',
     },
     {
       id: 2,
       userId: 'BBBB',
       imgSrc: 'images/sseung/profile.jpeg',
+      info: 'abcdefg님이 팔로우합니다',
     },
     {
       id: 3,
       userId: 'CCCCCCCC',
       imgSrc: 'images/sseung/profile.jpeg',
+      info: 'abcdefg님이 팔로우합니다',
     },
     {
       id: 4,
       userId: 'DDDD',
       imgSrc: 'images/sseung/profile.jpeg',
+      info: '칭구칭구',
     },
     {
       id: 5,
       userId: 'EEE',
       imgSrc: 'images/sseung/profile.jpeg',
+      info: '칭구칭구',
     },
     {
       id: 6,
       userId: 'FFFFFF',
       imgSrc: 'images/sseung/profile.jpeg',
+      info: '칭구칭구',
     },
     {
       id: 7,
       userId: 'GGGGGGGG',
       imgSrc: 'images/sseung/profile.jpeg',
+      info: '칭구칭구',
     },
   ];
 
@@ -138,7 +149,7 @@ const Main = () => {
               <Feed key={it.id} data={it} />
             ))}
           </section>
-          <MainRight />
+          <MainRight userData={userData} recommendData={storyData} />
         </div>
       </main>
     </div>
