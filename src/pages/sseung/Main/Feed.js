@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Contents from './Contents';
 import FeedTop from './FeedTop';
-import ImageSlide from './imageSlide';
+import ImageSlide from './ImageSlide';
 import Interaction from './Interaction';
 
 const Feed = ({ data }) => {
