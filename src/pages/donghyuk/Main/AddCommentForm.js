@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './AddCommentForm.scss';
 
 const AddCommentForm = ({ onAdd }) => {
+  const [validation, setValidation] = useState(false);
   const inputRef = useRef();
   const formRef = useRef();
 
@@ -10,6 +11,12 @@ const AddCommentForm = ({ onAdd }) => {
     const text = inputRef.current.value;
     text.trim() && onAdd(text.trim());
     formRef.current.reset();
+    setValidation(false);
+  };
+
+  const handleInput = () => {
+    const CommentValue = inputRef.current.value;
+    CommentValue.trim() ? setValidation(true) : setValidation(false);
   };
 
   return (
@@ -19,8 +26,11 @@ const AddCommentForm = ({ onAdd }) => {
         className="addForm-input"
         type="text"
         placeholder="댓글 달기..."
+        onChange={handleInput}
       />
-      <button className="addForm-button">게시</button>
+      <button className={`addForm-button ${validation ? '' : 'disable'}`}>
+        게시
+      </button>
     </form>
   );
 };
