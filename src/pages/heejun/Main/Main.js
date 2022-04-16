@@ -1,6 +1,7 @@
 import './Main.scss';
 import Nav from '../../../components/Nav/Nav';
 import { useState } from 'react';
+import Comment from '../Comment/Comment';
 
 function Main() {
   const [conmment, setComment] = useState('');
@@ -12,14 +13,14 @@ function Main() {
 
   const handleTotalEnter = e => {
     e.preventDefault();
-    //const plusArray = [...conmmentArrary]; // 지금까지 배열을 저장한다.
+    // const plusArray = [...conmmentArrary]; // 지금까지 배열을 저장한다.
     if (conmment !== '') {
       setCommentArray(prev => [
         ...prev,
         { conmment: conmment, id: '_heejun_' },
       ]);
-      //plusArray.push({ id: '_heejuun_', conmment: conmment }); // 빈 값이 아니면  plusArray에 푸쉬한다.
-      //setCommentArray(plusArray); // 새로운 값으로 저장한다.
+      // plusArray.push({ id: '_heejuun_', conmment: conmment }); // 빈 값이 아니면  plusArray에 푸쉬한다.
+      // setCommentArray(plusArray); // 새로운 값으로 저장한다.
     }
     setComment(''); // 이미 저장된 댓글은 지운다.
   };
@@ -71,16 +72,7 @@ function Main() {
                   <span className="conmment-plus">더보기</span>
                 </div>
               </div>
-              <ul className="comment-push">
-                {conmmentArrary.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <span className="id-value">{item.id}</span>
-                      <span className="comment-value">{item.conmment}</span>
-                    </li>
-                  );
-                })}
-              </ul>
+              <Comment arr={conmmentArrary} />
               <div className="comment-list-wrap" />
               <form className="comment-action-wrap" onSubmit={handleTotalEnter}>
                 <input
