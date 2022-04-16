@@ -57,5 +57,9 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    .forgotPassword {
+      color: blue;
+      text-decoration: underline;
+    }
   }
 }

@@ -55,7 +55,7 @@ function Login() {
                 </button>
               </form>
               <div className="forgot">
-                <a href="#">비밀번호를 잊으셨나요?</a>
+                <span className="forgotPassword">비밀번호를 잊으셨나요?</span>
               </div>
             </div>
           </article>
