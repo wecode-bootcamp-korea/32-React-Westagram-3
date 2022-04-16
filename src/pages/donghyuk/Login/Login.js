@@ -48,7 +48,7 @@ const Login = () => {
           로그인
         </button>
       </form>
-      <a className="login-find" href="#">
+      <a className="login-find" href="/login-donghyuk">
         비밀번호를 잊으셨나요?
       </a>
     </div>
