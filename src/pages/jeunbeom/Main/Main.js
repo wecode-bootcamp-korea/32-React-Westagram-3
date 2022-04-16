@@ -1,6 +1,7 @@
 import React from 'react';
 import './Main.scss';
 import { useState } from 'react';
+import Comment from './Comment';
 
 function Main() {
   const [comment1, setComment1] = useState('');
@@ -24,7 +25,7 @@ function Main() {
         <div className="nav-left">
           <img
             className="instagram-img"
-            src="./images/jeunbeom/instagram.png"
+            src="../images/jeunbeom/instagram.png"
             alt="인스타그램 로고 이미지"
           />
           <p className="instagram-word">Instagram</p>
@@ -36,17 +37,17 @@ function Main() {
         <div className="nav-right">
           <img
             className="explore"
-            src="./images/jeunbeom/explore.png"
+            src="../images/jeunbeom/explore.png"
             alt="탐색 아이콘"
           />
           <img
             className="heart"
-            src="./images/jeunbeom/heart.png"
+            src="../images/jeunbeom/heart.png"
             alt="좋아요 아이콘"
           />
           <img
             className="profileicon"
-            src="./images/jeunbeom/profile.png"
+            src="../images/jeunbeom/profile.png"
             alt="계정 아이콘"
           />
         </div>
@@ -62,7 +63,7 @@ function Main() {
             </div>
             <img
               className="dog"
-              src="./images/jeunbeom/dog.jpg"
+              src="../images/jeunbeom/dog.jpg"
               alt="메인 피드 이미지"
             />
             <div className="icons">
@@ -87,12 +88,7 @@ function Main() {
               <span class="seemore"> 더 보기</span>
             </ul>
             <ul className="userCommentList">
-              {commentContainer.map((value, index) => (
-                <li key={index}>
-                  <span className="commentUserId">ABC</span>
-                  {value}
-                </li>
-              ))}
+              <Comment name={commentContainer} />
             </ul>
 
             <form className="addcomment" onSubmit={handleOnSubmit}>
@@ -111,7 +107,7 @@ function Main() {
               <div className="profile">
                 <img
                   className="house"
-                  src="./images/jeunbeom/house.jpg"
+                  src="../images/jeunbeom/house.jpg"
                   alt="광고 계정 이미지"
                 />
                 <p className="profileId">
@@ -127,7 +123,7 @@ function Main() {
               <div className="friendstory">
                 <img
                   className="friend1"
-                  src="./images/jeunbeom/yogurt.jpg"
+                  src="../images/jeunbeom/yogurt.jpg"
                   alt="친구 이미지"
                 />
                 <p className="yougurtlover">yogurt_lover</p>
@@ -141,7 +137,7 @@ function Main() {
               <div className="recommenduser">
                 <img
                   className="cat"
-                  src="./images/jeunbeom/cat.jpg"
+                  src="../images/jeunbeom/cat.jpg"
                   alt="추천 이미지"
                 />
                 <p className="knowuser">seuboi</p>
