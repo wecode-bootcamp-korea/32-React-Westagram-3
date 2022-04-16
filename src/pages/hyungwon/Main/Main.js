@@ -1,16 +1,33 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
+import { useState } from 'react';
 import './Main.scss';
 import MainRight from '../Main/MainRight/MainRight.js';
 import Nav from '../../../components/Nav/Nav.js';
-import Comments from './Comments/Comments';
+import Comment from './Comment/Comment';
 
 const Main = () => {
-  const navigate = useNavigate();
-  const goToMain = () => {
-    navigate('/login-hyungwon');
+  const [comment, setComment] = useState('');
+  const [commentArray, setCommentArray] = useState([]);
+
+  const handleInput = e => {
+    const { value } = e.target;
+    setComment(value);
   };
 
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    if (comment.trim().length > 0) {
+      setCommentArray([
+        ...commentArray,
+        {
+          key: new Date().getTime(),
+          contents: comment,
+        },
+      ]);
+    }
+    setComment('');
+  };
   return (
     <>
       <Nav />
@@ -75,28 +92,20 @@ const Main = () => {
               <div className="profile_name commit_name">wkdguddnjs</div>
               <div className="commit_content">벚꽃 보러가자</div>
             </div>
-            <form className="comment">
-              <Comments />
-            </form>
+            <Comment banana={commentArray} />
             <div className="upload_time">1시간 전</div>
-            <div className="upload_comment">
+            <form className="upload_comment" onSubmit={handleSubmit}>
               <input
-                type="search"
+                onChange={handleInput}
+                type="text"
+                name="comment"
                 className="commit_comment"
                 placeholder="댓글달기..."
                 width="30"
-                // onClick={goToMain}
-                onKeyUp={goToMain}
-                // onKeypress="javascript:if(event.keyCode==13) {pressEnter()}"
+                value={comment}
               />
-              <button
-                // onclick="getClick()"
-                type="button"
-                className="press_commit"
-              >
-                게시
-              </button>
-            </div>
+              <button className="press_commit">게시</button>
+            </form>
           </article>
         </div>
         <MainRight />

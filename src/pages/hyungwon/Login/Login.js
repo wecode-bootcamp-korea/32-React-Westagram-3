@@ -10,8 +10,8 @@ const Login = () => {
   });
   const { email, password } = inputValue;
 
-  const handleInput = event => {
-    const { name, value } = event.target;
+  const handleInput = e => {
+    const { name, value } = e.target;
     setInputValue({
       ...inputValue,
       [name]: value,
