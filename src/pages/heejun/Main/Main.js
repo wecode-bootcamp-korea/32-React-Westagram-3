@@ -14,12 +14,13 @@ function Main() {
   const handleTotalEnter = e => {
     e.preventDefault();
     // const plusArray = [...conmmentArrary]; // 지금까지 배열을 저장한다.
+    // plusArray.push({ id: '_heejuun_', conmment: conmment }); // 빈 값이 아니면  plusArray에 푸쉬한다
+
     if (conmment !== '') {
       setCommentArray(prev => [
         ...prev,
-        { conmment: conmment, id: '_heejun_' },
+        { id: Date.now(), conmment: conmment, userName: '_heejun_' },
       ]);
-      // plusArray.push({ id: '_heejuun_', conmment: conmment }); // 빈 값이 아니면  plusArray에 푸쉬한다.
       // setCommentArray(plusArray); // 새로운 값으로 저장한다.
     }
     setComment(''); // 이미 저장된 댓글은 지운다.
