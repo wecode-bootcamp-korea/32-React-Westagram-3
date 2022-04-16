@@ -1,3 +1,4 @@
+import React from 'react';
 import './Main.scss';
 import { useState } from 'react';
 
@@ -24,17 +25,30 @@ function Main() {
           <img
             className="instagram-img"
             src="./images/jeunbeom/instagram.png"
+            alt="인스타그램 로고 이미지"
           />
           <p className="instagram-word">Instagram</p>
         </div>
         <div className="nav-center">
           <input type="text" class="search" placeholder="검색" />
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-magnifying-glass" />
         </div>
         <div className="nav-right">
-          <img className="explore" src="./images/jeunbeom/explore.png" />
-          <img className="heart" src="./images/jeunbeom/heart.png" />
-          <img className="profileicon" src="./images/jeunbeom/profile.png" />
+          <img
+            className="explore"
+            src="./images/jeunbeom/explore.png"
+            alt="탐색 아이콘"
+          />
+          <img
+            className="heart"
+            src="./images/jeunbeom/heart.png"
+            alt="좋아요 아이콘"
+          />
+          <img
+            className="profileicon"
+            src="./images/jeunbeom/profile.png"
+            alt="계정 아이콘"
+          />
         </div>
       </nav>
 
@@ -42,23 +56,27 @@ function Main() {
         <main className="page">
           <div className="bigbox">
             <div className="id">
-              <i className="fa-solid fa-circle"></i>
+              <i className="fa-solid fa-circle" />
               <p className="userid">beom_pie</p>
               <p className="dots">···</p>
             </div>
-            <img className="dog" src="./images/jeunbeom/dog.jpg" />
+            <img
+              className="dog"
+              src="./images/jeunbeom/dog.jpg"
+              alt="메인 피드 이미지"
+            />
             <div className="icons">
               <div className="lefticon">
-                <i className="fa-solid fa-heart"></i>
-                <i className="fa-solid fa-comment-dots"></i>
-                <i className="fa-solid fa-share"></i>
+                <i className="fa-solid fa-heart" />
+                <i className="fa-solid fa-comment-dots" />
+                <i className="fa-solid fa-share" />
               </div>
               <div className="righticon">
-                <i className="fa-solid fa-bookmark"></i>
+                <i className="fa-solid fa-bookmark" />
               </div>
             </div>
             <div className="likes">
-              <i className="fa-regular fa-face-grin-squint"></i>
+              <i className="fa-regular fa-face-grin-squint" />
               <span className="howmanylikes">
                 <strong>wecode</strong>님 <strong>외 100명</strong>이 좋아합니다
               </span>
@@ -91,7 +109,11 @@ function Main() {
           <div className="main-right">
             <div className="idinfo">
               <div className="profile">
-                <img className="house" src="./images/jeunbeom/house.jpg" />
+                <img
+                  className="house"
+                  src="./images/jeunbeom/house.jpg"
+                  alt="광고 계정 이미지"
+                />
                 <p className="profileId">
                   <strong>pet_shop</strong>
                 </p>
@@ -103,7 +125,11 @@ function Main() {
                 <p className="storyseeall">모두 보기</p>
               </div>
               <div className="friendstory">
-                <img className="friend1" src="./images/jeunbeom/yogurt.jpg" />
+                <img
+                  className="friend1"
+                  src="./images/jeunbeom/yogurt.jpg"
+                  alt="친구 이미지"
+                />
                 <p className="yougurtlover">yogurt_lover</p>
               </div>
             </div>
@@ -113,7 +139,11 @@ function Main() {
                 <p className="clientseeall">모두 보기</p>
               </div>
               <div className="recommenduser">
-                <img className="cat" src="./images/jeunbeom/cat.jpg" />
+                <img
+                  className="cat"
+                  src="./images/jeunbeom/cat.jpg"
+                  alt="추천 이미지"
+                />
                 <p className="knowuser">seuboi</p>
                 <p className="follow">팔로우</p>
               </div>
