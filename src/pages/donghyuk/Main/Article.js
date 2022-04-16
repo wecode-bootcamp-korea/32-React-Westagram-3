@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AddItemForm from './AddItemForm';
+import AddCommentForm from './AddCommentForm';
 import FeedContent from './FeedContent';
 import FeedIconBar from './FeedIconBar';
 import FeedLikeBar from './FeedLikeBar';
@@ -25,7 +25,7 @@ const Article = props => {
       <FeedIconBar />
       <FeedLikeBar />
       <FeedContent onDelete={onDelete} comments={comments} />
-      <AddItemForm onAdd={onAdd} />
+      <AddCommentForm onAdd={onAdd} />
     </article>
   );
 };

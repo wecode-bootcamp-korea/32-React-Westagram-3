@@ -1,14 +1,14 @@
 import React, { useRef } from 'react';
-import './AddItemForm.scss';
+import './AddCommentForm.scss';
 
-const AddItemForm = ({ onAdd }) => {
+const AddCommentForm = ({ onAdd }) => {
   const inputRef = useRef();
   const formRef = useRef();
 
   const handleAdd = event => {
     event.preventDefault();
     const text = inputRef.current.value;
-    text.trim() && onAdd(text);
+    text.trim() && onAdd(text.trim());
     formRef.current.reset();
   };
 
@@ -25,4 +25,4 @@ const AddItemForm = ({ onAdd }) => {
   );
 };
 
-export default AddItemForm;
+export default AddCommentForm;
