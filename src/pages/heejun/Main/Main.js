@@ -1,11 +1,24 @@
 import './Main.scss';
 import Nav from '../../../components/Nav/Nav';
-import { useState } from 'react';
-import Comment from '../Comment/Comment';
-
+import { useState, useEffect } from 'react';
+import FeedHeader from '../Components/FeedHeader';
+import FeedNav from '../Components/FeedNav';
+import FeedHeartCount from '../Components/FeedHeartCount';
+import CommentWrap from '../Components/CommentWrap';
+import FeedImg from '../Components/FeedImg';
 function Main() {
-  const [conmment, setComment] = useState('');
-  const [conmmentArrary, setCommentArray] = useState([]);
+  const [comment, setComment] = useState('');
+  const [commentArrary, setCommentArray] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/data/commentData.json', {
+      method: 'GET', // GET method는 기본값이라서 생략이 가능합니다.
+    }) // 예시코드에서는 이해를 돕기 위해 명시적으로 기입해뒀습니다.
+      .then(res => res.json())
+      .then(data => {
+        setCommentArray(data);
+      });
+  }, []);
 
   const handleReviewInput = event => {
     setComment(event.target.value); // 인풋값 계속 리로드
@@ -13,13 +26,13 @@ function Main() {
 
   const handleTotalEnter = e => {
     e.preventDefault();
-    // const plusArray = [...conmmentArrary]; // 지금까지 배열을 저장한다.
-    // plusArray.push({ id: '_heejuun_', conmment: conmment }); // 빈 값이 아니면  plusArray에 푸쉬한다
 
-    if (conmment !== '') {
+    // const plusArray = [...commentArrary]; // 지금까지 배열을 저장한다.
+    // plusArray.push({ id: '_heejuun_', comment: comment }); // 빈 값이 아니면  plusArray에 푸쉬한다
+    if (comment.trim() !== '') {
       setCommentArray(prev => [
         ...prev,
-        { id: Date.now(), conmment: conmment, userName: '_heejun_' },
+        { id: Date.now(), comment: comment, userName: '_heejun_' },
       ]);
       // setCommentArray(plusArray); // 새로운 값으로 저장한다.
     }
@@ -31,63 +44,17 @@ function Main() {
       <Nav />
       <main className="containerMain">
         <div className="feeds">
-          <div className="feed-header">
-            <img alt="피드 프로필 이미지" src="/images/heejun/IMG_0070.JPG" />
-            <span className="feed-header-myName">_heejuun_</span>
-          </div>
-
+          <FeedHeader />
           <article className="article">
-            <img
-              alt="피드 본문 이미지"
-              src="/images/heejun/97BD93F8-9568-4F88-B209-FD72E61BED7C.JPG"
-              className="feed-Img"
+            <FeedImg />
+            <FeedNav />
+            <FeedHeartCount />
+            <CommentWrap
+              onChange={handleReviewInput}
+              value={comment}
+              arr={commentArrary}
+              onSubmit={handleTotalEnter}
             />
-            <div className="feed-nav">
-              <div className="feed-nav-left">
-                <i className="fa-solid fa-heart" />
-                <i className="fa-solid fa-comment" />
-                <i className="fa-solid fa-arrow-up-from-bracket" />
-              </div>
-              <div className="feed-nav-right">
-                <i className="fa-solid fa-bookmark" />
-              </div>
-            </div>
-            <div className="heart-count">
-              <div>
-                <img
-                  alt="좋아요 누른 사람 프로필 사진"
-                  src="/images/heejun/IMG_0069.JPG"
-                />
-              </div>
-              <span>___e.be</span>
-              <span>님</span>
-              <span>외 43명</span>
-              <span>이 좋아합니다</span>
-            </div>
-
-            <div className="comment-wrap">
-              <div className="comment">
-                <div>
-                  <span className="comment-myname">_heejuun_</span>
-                  <span> 아르떼 뮤지엄에서 찰칵 📸...</span>
-                  <span className="conmment-plus">더보기</span>
-                </div>
-              </div>
-              <Comment arr={conmmentArrary} />
-              <div className="comment-list-wrap" />
-              <form className="comment-action-wrap" onSubmit={handleTotalEnter}>
-                <input
-                  className="comment-input"
-                  type="text"
-                  placeholder="댓글달기..."
-                  value={conmment}
-                  onChange={handleReviewInput}
-                />
-                <div className="comment-btn">
-                  <button>게시</button>
-                </div>
-              </form>
-            </div>
           </article>
         </div>
 
