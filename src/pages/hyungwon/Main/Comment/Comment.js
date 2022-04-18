@@ -1,34 +1,61 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import { useState } from 'react';
+import { useRef } from 'react';
 import '../Comment/Comment.scss';
 
 const Comment = props => {
-  const deleteHeart = useRef();
-  const deleteComment = e => {
-    if (e.target.className === 'delete_comment') {
-      e.target.closest('.add_comment').remove();
+  const likeHeart = useRef();
+  const deleteThis = useRef();
+  const [count, setCount] = useState(0);
+  const deleteComment = (e, index) => {
+    if (index === parseInt(e.currentTarget.id)) {
+      e.currentTarget.closest('.add_comment').remove();
     }
   };
-  const likeComment = () => {
-    deleteHeart.current.src = '/images/hyungwon/heart1.png';
+
+  const likeComment = (e, index) => {
+    setCount(count => count + 1);
+    if (index === parseInt(e.currentTarget.id)) {
+      if (count % 2 === 0) {
+        e.target.src = '/images/hyungwon/heart1.png';
+      } else {
+        e.target.src = '/images/hyungwon/heart.png';
+      }
+    }
   };
-  const addComment = props.banana.map(x => {
+  const addComment = props.banana.map((x, indexFromMap) => {
     return (
-      <li key={x.key} className="add_comment" onClick={deleteComment}>
+      <li
+        key={x.key}
+        id={indexFromMap}
+        ref={deleteThis}
+        className="add_comment"
+      >
         <div className="comment_right">
           <div className="nickname">jhw</div>
           <div className="inputValue">{x.contents}</div>
         </div>
         <div className="comment_button">
-          <button>
+          <button
+            id={indexFromMap}
+            onClick={e => {
+              deleteComment(e, indexFromMap);
+            }}
+          >
             <img
               alt="delete_comment"
               src="/images/hyungwon/delete.png"
               className="delete_comment"
             />
           </button>
-          <button onClick={likeComment}>
+          <button
+            id={indexFromMap}
+            onClick={e => {
+              likeComment(e, indexFromMap);
+            }}
+          >
             <img
-              ref={deleteHeart}
+              ref={likeHeart}
               alt="comment_heart"
               src="/images/hyungwon/heart.png"
               className="comment_heart"

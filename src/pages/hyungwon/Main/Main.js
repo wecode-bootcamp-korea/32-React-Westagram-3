@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useState } from 'react';
 import './Main.scss';
 import MainRight from '../Main/MainRight/MainRight.js';
@@ -6,8 +6,19 @@ import Nav from '../../../components/Nav/Nav.js';
 import Comment from './Comment/Comment';
 
 const Main = () => {
+  const feedLike = useRef();
   const [comment, setComment] = useState('');
   const [commentArray, setCommentArray] = useState([]);
+  const [feedLikeCount, setFeedLikeCount] = useState(0);
+
+  const likeFeed = () => {
+    setFeedLikeCount(feedLikeCount + 1);
+    if (feedLikeCount % 2 === 0) {
+      feedLike.current.src = '/images/hyungwon/heart1.png';
+    } else {
+      feedLike.current.src = '/images/hyungwon/heart.png';
+    }
+  };
 
   const handleInput = e => {
     const { value } = e.target;
@@ -58,11 +69,14 @@ const Main = () => {
             </div>
             <div className="activity">
               <div className="activity_right">
-                <img
-                  src="/images/hyungwon/heart1.png"
-                  alt="post_heart"
-                  className="post_heart"
-                />
+                <button onClick={likeFeed}>
+                  <img
+                    ref={feedLike}
+                    src="/images/hyungwon/heart.png"
+                    alt="post_heart"
+                    className="post_heart"
+                  />
+                </button>
                 <img
                   src="/images/hyungwon/bubble-chat.png"
                   alt="comment_go"
@@ -93,12 +107,11 @@ const Main = () => {
               <div className="commit_content">벚꽃 보러가자</div>
             </div>
             <Comment banana={commentArray} />
-            <div className="upload_time">1시간 전</div>
+            <p className="upload_time">1시간 전</p>
             <form className="upload_comment" onSubmit={handleSubmit}>
               <input
                 onChange={handleInput}
                 type="text"
-                name="comment"
                 className="commit_comment"
                 placeholder="댓글달기..."
                 width="30"
