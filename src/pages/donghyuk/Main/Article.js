@@ -6,7 +6,7 @@ import FeedLikeBar from './FeedLikeBar';
 import './Article.scss';
 
 const Article = ({ profileInfo: { userName }, feedInfo }) => {
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState(feedInfo.comment);
 
   useEffect(() => {
     setComments(feedInfo.comment);
@@ -32,7 +32,11 @@ const Article = ({ profileInfo: { userName }, feedInfo }) => {
       <FeedIconBar />
       <FeedLikeBar />
       {/* <FeedContent onDelete={onDelete} comments={feedInfo.comment} /> */}
-      <FeedContent onDelete={onDelete} feedInfo={feedInfo} />
+      <FeedContent
+        onDelete={onDelete}
+        feedInfo={feedInfo}
+        comments={comments}
+      />
       <AddCommentForm onAdd={onAdd} />
     </article>
   );
