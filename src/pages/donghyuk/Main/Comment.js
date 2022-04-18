@@ -15,8 +15,8 @@ const Comment = ({ comment, onDelete }) => {
   return (
     <li className="commentRow">
       <div className="commentLeft">
-        <span className="commentId">{comment.name}</span>
-        <span className="commentText">{comment.text}</span>
+        <span className="commentId">{comment.userName}</span>
+        <span className="commentText">{comment.content}</span>
       </div>
       <div className="commentRight">
         <button onClick={handleDelete} className="commentDelete">

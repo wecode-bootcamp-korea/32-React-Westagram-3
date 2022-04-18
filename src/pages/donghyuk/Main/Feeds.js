@@ -3,11 +3,11 @@ import Article from './Article';
 import Profile from './Profile';
 import './Feeds.scss';
 
-const Feeds = props => {
+const Feeds = ({ feedInfo }) => {
   return (
     <div className="main-feeds">
-      <Profile />
-      <Article />
+      <Profile profileInfo={feedInfo.profile} />
+      <Article profileInfo={feedInfo.profile} feedInfo={feedInfo} />
     </div>
   );
 };

@@ -8,8 +8,8 @@ const AddCommentForm = ({ onAdd }) => {
 
   const handleAdd = event => {
     event.preventDefault();
-    const text = inputRef.current.value;
-    text.trim() && onAdd(text.trim());
+    const content = inputRef.current.value;
+    content.trim() && onAdd(content.trim());
     formRef.current.reset();
     setValidation(false);
   };

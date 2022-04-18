@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-.main-article {
-  width: 100%;
+body {
+  width: 100vw;
 }
 
-.article-img {
-  width: 610px;
-  height: 614px;
+.main-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 975px;
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .main-right {

@@ -6,7 +6,11 @@ const Comments = ({ comments, onDelete }) => {
   return (
     <ul className="comments">
       {comments.map(comment => (
-        <Comment key={comment.id} onDelete={onDelete} comment={comment} />
+        <Comment
+          key={comment.commentId}
+          onDelete={onDelete}
+          comment={comment}
+        />
       ))}
     </ul>
   );
