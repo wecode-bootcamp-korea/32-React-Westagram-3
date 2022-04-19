@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "userId": "beom_pie",
+    "feedImg": "../images/jeunbeom/dog.jpg",
+    "firstLiker": "wecode",
+    "likeCounter": 1000,
+    "feedCommentList": []
+  },
+  {
+    "id": 2,
+    "userName": "beom_pie",
+    "feedImg": "../images/jeunbeom/cat.jpg",
+    "firstLiker": "sueboi",
+    "likeCounter": 10,
+    "feedCommentList": []
+  }
+]

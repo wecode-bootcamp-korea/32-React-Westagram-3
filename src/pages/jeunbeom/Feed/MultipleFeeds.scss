@@ -1,0 +1,12 @@
+.multipleFeeds {
+  display: flex;
+  padding-left: 80px;
+  padding-top: 60px;
+  justify-content: space-evenly;
+  .feeds {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 60px 20px;
+  }
+}

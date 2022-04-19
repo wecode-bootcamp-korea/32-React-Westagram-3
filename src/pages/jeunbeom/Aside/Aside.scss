@@ -1,0 +1,149 @@
+.page-right {
+  width: 500px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  p {
+    margin: 0;
+  }
+
+  .profile {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+
+    .house {
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      margin-bottom: 20px;
+      margin-left: 15px;
+      margin-top: 10px;
+    }
+    .profileId {
+      margin-left: 20px;
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  }
+
+  .story {
+    width: 90%;
+    height: 300px;
+    margin-left: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .storyuser {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+
+      .seestory {
+        margin-left: 10px;
+        margin-top: 10px;
+        color: lightgray;
+        font-size: 13px;
+      }
+
+      .storyseeall {
+        margin-right: 10px;
+        margin-top: 10px;
+        height: 30px;
+        font-size: 13px;
+      }
+    }
+    .friendstory {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: baseline;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+
+      .friend1 {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        border: 1px solid red;
+        margin-left: 30px;
+        padding: 1px;
+      }
+      .yougurtlover {
+        font-size: 15px;
+        margin-top: 15px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .recommendation {
+    width: 90%;
+    height: 150px;
+    margin-left: 15px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    .recommendationuser {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+
+      .client {
+        margin-left: 10px;
+        margin-top: 10px;
+        color: lightgray;
+        font-size: 13px;
+      }
+
+      .clientseeall {
+        margin-right: 10px;
+        margin-top: 10px;
+        height: 30px;
+        font-size: 13px;
+      }
+    }
+    .recommenduser {
+      display: flex;
+      flex-direction: row;
+      justify-content: baseline;
+      width: 100%;
+      height: 40px;
+
+      .cat {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-left: 30px;
+      }
+
+      .knowuser {
+        font-size: 15px;
+        margin-top: 15px;
+        margin-left: 10px;
+      }
+
+      .follow {
+        color: blue;
+        font-size: 15px;
+        margin-left: auto;
+        margin-top: 15px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
