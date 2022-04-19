@@ -4,7 +4,7 @@ import FeedTop from './FeedTop';
 import ImageSlide from './ImageSlide';
 import Interaction from './Interaction';
 
-const Feed = ({ data }) => {
+const Feed = ({ data, userData }) => {
   const { id, userId, comments, profileImg, imgSrc, liked, likeNum } = data;
   const [commentList, setCommentList] = useState(comments);
   const [commentText, setCommentText] = useState('');
@@ -23,7 +23,7 @@ const Feed = ({ data }) => {
       ...commentList.map(item => item),
       {
         id: commentList.length,
-        user: '접속아이디',
+        user: userData.userId,
         text: commentText,
         liked: false,
       },

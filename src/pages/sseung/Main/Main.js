@@ -25,7 +25,7 @@ const Main = () => {
             <section className="feeds">
               <StoriesWrap storyData={myData.storyData} />
               {myData.feedData.map(it => (
-                <Feed key={it.id} data={it} />
+                <Feed key={it.id} data={it} userData={myData.userData} />
               ))}
             </section>
             <MainRight
