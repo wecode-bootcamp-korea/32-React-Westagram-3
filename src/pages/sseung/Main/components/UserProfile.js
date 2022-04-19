@@ -9,7 +9,7 @@ const UserProfile = ({ userData, btnClass, btnText }) => {
             className="profile_img"
           />
         </div>
-        <div>
+        <div className="user_idNname">
           <p className="user_id">{userData.userId}</p>
           <span>{userData.info}</span>
         </div>

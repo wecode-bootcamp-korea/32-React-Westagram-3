@@ -1,3 +1,4 @@
+import React from 'react';
 import Comment from './Comment';
 
 const CommentsBox = props => {
@@ -13,6 +14,7 @@ const CommentsBox = props => {
             item={item}
             index={index}
             commentLikeClassName={commentLikeClassName}
+            onRemoveComment={props.onRemoveComment}
             onCommentLike={props.onCommentLike}
           />
         ))}

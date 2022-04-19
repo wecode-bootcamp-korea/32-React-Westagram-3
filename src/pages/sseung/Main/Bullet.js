@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Bullet = ({ bulletNum }) => {
+const Bullet = ({ bulletNum, imgNum }) => {
   const liElement = Array(bulletNum)
     .fill(0)
     .map((item, index) => {
-      return index === 0 ? (
+      return index === imgNum ? (
         <li key={index} id={index} className="nowImg" />
       ) : (
         <li key={index} id={index} />

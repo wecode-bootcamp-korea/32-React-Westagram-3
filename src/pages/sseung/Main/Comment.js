@@ -22,7 +22,6 @@ const Comment = ({
           <i
             className={`${commentLikeClassName(item.liked)} fa-heart like`}
             onClick={() => {
-              console.log('클릭');
               onCommentLike(index);
             }}
           />

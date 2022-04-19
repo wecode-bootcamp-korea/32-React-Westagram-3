@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Contents from './Contents';
 import FeedTop from './FeedTop';
 import ImageSlide from './ImageSlide';
@@ -41,7 +41,7 @@ const Feed = ({ data }) => {
 
   //댓글 좋아요
   const onCommentLike = index => {
-    const clickLike = commentList.filter(item => item.id === index)[0];
+    const clickLike = commentList.find(item => item.id === index);
     clickLike.liked = !clickLike.liked;
     const commentListCopy = [...commentList];
     commentListCopy[index] = clickLike;

@@ -1,5 +1,4 @@
 const StoriesWrap = ({ storyData }) => {
-  console.log(storyData);
   return (
     <article className="stories_wrap">
       <ul className="stories">
