@@ -1,0 +1,48 @@
+{
+  "item": [
+    {
+      "id": "rlaehdus",
+      "userName": "rlaehdus",
+      "userProfilePhoto": "https://images.unsplash.com/photo-1640320776367-78c085bc9a0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+      "FeedPhotoUrl": "https://images.unsplash.com/photo-1613714034012-7aca3ea92e35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+      "content": "아침 풍경",
+      "isLiked": true
+    },
+    {
+      "id": "love_119",
+      "userName": "love_119",
+      "userProfilePhoto": "https://images.unsplash.com/photo-1614158869448-f356117d6698?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
+      "FeedPhotoUrl": "https://images.unsplash.com/photo-1648196583053-422ece33dc25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+      "content": "커피 한잔",
+      "isLiked": false
+    },
+    {
+      "id": "o_brain",
+      "userName": "o_brain",
+      "userProfilePhoto": "https://images.unsplash.com/photo-1649244451448-797144294226?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+      "FeedPhotoUrl": "https://images.unsplash.com/photo-1650214206609-8ba2cc3fb61d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
+      "content": "we go.",
+      "isLiked": false
+    }
+  ],
+  "comment": [
+    {
+      "id": 1,
+      "userName": "wecode",
+      "content": "Welcome to world best coding bootcamp!",
+      "isLiked": true
+    },
+    {
+      "id": 2,
+      "userName": "joonsikyang",
+      "content": "Hi there.",
+      "isLiked": false
+    },
+    {
+      "id": 3,
+      "userName": "jayPark",
+      "content": "Hey.",
+      "isLiked": false
+    }
+  ]
+}

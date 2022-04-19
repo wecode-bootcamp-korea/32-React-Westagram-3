@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useRef } from 'react';
 import '../Comment/Comment.scss';
 
-const Comment = props => {
+const DefaultComment = props => {
   const likeHeart = useRef();
   const deleteThis = useRef();
   const [count, setCount] = useState(0);
@@ -23,16 +23,18 @@ const Comment = props => {
       }
     }
   };
-  const addComment = props.fruit.map((x, indexFromMap) => {
+
+  const jsonComment = props.commentList.map((x, indexFromMap) => {
     return (
       <li
-        key={x.key}
+        key={indexFromMap}
         id={indexFromMap}
         ref={deleteThis}
+        username={x.username}
         className="add_comment"
       >
         <div className="comment_right">
-          <div className="nickname">jhw</div>
+          <div className="nickname">{x.userName}</div>
           <div className="inputValue">{x.content}</div>
         </div>
         <div className="comment_button">
@@ -65,7 +67,7 @@ const Comment = props => {
       </li>
     );
   });
-  return addComment;
+  return jsonComment;
 };
 
-export default Comment;
+export default DefaultComment;
