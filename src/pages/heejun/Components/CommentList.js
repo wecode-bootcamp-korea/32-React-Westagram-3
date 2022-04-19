@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-export default function CommentList({ arr }) {
+export default function CommentList({ commentArray }) {
   return (
     <ul className="comment-push">
-      {arr.map(comment => {
+      {commentArray.map(comment => {
         return (
           <li key={comment.id}>
             <span className="id-value">{comment.userName}</span>

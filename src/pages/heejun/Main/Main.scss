@@ -99,7 +99,7 @@
           width: 30px;
           height: 30px;
           border-radius: 50%;
-          border: 2px solid #f10a3c;
+          border: 3px solid #f10a3c;
         }
 
         .feed-header-myName {
@@ -111,23 +111,24 @@
       .article {
         img {
           width: 100%;
-          height: 600px;
+          height: 730px;
         }
         .feed-nav {
           display: flex;
           justify-content: space-between;
           width: 100%;
+          padding: 10px;
 
           .feed-nav-left {
-            margin-left: 15px;
+            margin-left: 10px;
             .fa-heart {
-              margin-right: 8px;
+              margin-right: 10px;
               color: red;
               font-size: 20px;
             }
 
             .fa-comment {
-              margin-right: 8px;
+              margin-right: 10px;
               font-size: 20px;
             }
 
@@ -162,6 +163,9 @@
           li {
             margin-top: 10px;
           }
+          .comment-push {
+            margin-left: 5px;
+          }
           .id-value {
             font-weight: 600;
             margin-left: 10px;
@@ -169,7 +173,7 @@
           }
 
           .comment {
-            margin-left: 10px;
+            margin-left: 15px;
 
             .comment-plus {
               margin-left: 2%;
@@ -233,7 +237,7 @@
           height: 50px;
           border-radius: 50%;
           margin-right: 5%;
-          border: 2.5px solid #f10a3c;
+          border: 3px solid #f10a3c;
         }
         .main-right-myname {
           display: flex;
@@ -274,7 +278,7 @@
           img {
             width: 35px;
             height: 35px;
-            border: 2.5px solid #f10a3c;
+            border: 3px solid #f10a3c;
             border-radius: 50%;
           }
           .story-name {
@@ -297,9 +301,10 @@
           display: flex;
           justify-content: space-between;
           margin: 10px;
+
           span {
             margin-left: 10px;
-            font-weight: 600;
+            font-weight: 800;
             font-size: 13px;
           }
           span {

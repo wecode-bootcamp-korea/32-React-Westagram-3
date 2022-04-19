@@ -6,7 +6,7 @@ export default function FeedHeartCount() {
       <div>
         <img
           alt="좋아요 누른 사람 프로필 사진"
-          src="/images/heejun/IMG_0069.JPG"
+          src="/images/heejun/IMG_0812.JPG"
         />
       </div>
       <span>___e.be</span>

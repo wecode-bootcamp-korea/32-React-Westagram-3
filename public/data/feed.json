@@ -1,65 +1,75 @@
 {
-  "items": [
+  "item": [
     {
-      "feedId": 1,
-      "feedInfo": {
-        "post": "댕댕이:개:",
-        "articlImgUrl": "https://slack-imgs.com/?c=1&o1=ro&url=https%3A%2F%2Fscontent.cdninstagram.com%2Fv%2Ft51.2885-19%2F247203900_3246088132285249_6367804372846765968_n.jpg%3Fstp%3Ddst-jpg_s240x240%26_nc_ht%3Dscontent.cdninstagram.com%26_nc_cat%3D101%26_nc_ohc%3DYyKfdHFL6lYAX_GJWhE%26edm%3DAMO9-JQAAAAA%26ccb%3D7-4%26oh%3D00_AT-dDG202boJfRR_vE14G6D06vz7RZbDjs7fSTHvpm2pJg%26oe%3D626324B2%26_nc_sid%3Db9f2ee",
-        "profile": {
-          "url": "images/donghyuk/덕순1.jpg",
-          "userName": "gel_fos"
+      "feedsId": "1",
+      "feedsInfo": {
+        "header": {
+          "headerId": "_heejun_",
+          "headerUrl": "../images/heejun/IMG_0813.JPG"
         },
-        "comment": [
-          {
-            "commentId": 1,
-            "userName": "muumimi_",
-            "content": "덕순이 너무 귀엽다~:주황색_하트:",
-            "isLiked": true
-          },
-          {
-            "commentId": 2,
-            "userName": "tjc_dew",
-            "content": ":리본이_달린_하트::흰색_하트::하트_모양의_두꺼운_느낌표::두_개의_하트::심박::회전하는_하트:",
-            "isLiked": false
-          },
-          {
-            "commentId": 3,
-            "userName": "jayPark",
-            "content": "so cute",
-            "isLiked": false
-          }
-        ]
+        "pic": {
+          "picUrl": "../images/heejun/97BD93F8-9568-4F88-B209-FD72E61BED7C.JPG"
+        },
+        "article": {
+          "userName": "_heejuun_",
+          "content": "아르떼 뮤지엄에서 찰칵 📸...",
+          "comment": [
+            {
+              "id": 1,
+              "userName": "wecode",
+              "comment": "Welcome to world best coding bootcamp!",
+              "isLiked": true
+            },
+            {
+              "id": 2,
+              "userName": "joonsikyang",
+              "comment": "Hi there.",
+              "isLiked": false
+            },
+            {
+              "id": 3,
+              "userName": "jayPark",
+              "comment": "Hey.",
+              "isLiked": false
+            }
+          ]
+        }
       }
     },
     {
-      "feedId": 2,
-      "feedInfo": {
-        "post": "정리",
-        "articlImgUrl": "https://images.unsplash.com/photo-1536329583941-14287ec6fc4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
-        "profile": {
-          "url": "https://images.unsplash.com/photo-1650221750572-8c4a1aec406c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
-          "userName": "doyu"
+      "feedsId": "1",
+      "feedsInfo": {
+        "header": {
+          "headerId": "_heejun_",
+          "headerUrl": "../images/heejun/IMG_0813.JPG"
         },
-        "comment": [
-          {
-            "commentId": 1,
-            "userName": "eommijin",
-            "content": "????????????",
-            "isLiked": true
-          },
-          {
-            "commentId": 2,
-            "userName": "dragon",
-            "content": "Hi there.",
-            "isLiked": false
-          },
-          {
-            "commentId": 3,
-            "userName": "gel_fos2",
-            "content": "Hey.",
-            "isLiked": false
-          }
-        ]
+        "pic": {
+          "picUrl": "../images/heejun/FC6C3584-448C-494E-BDDA-D9322A97ACA6.JPG"
+        },
+        "article": {
+          "userName": "_heejuun_",
+          "content": "아르떼 뮤지엄에서 찰칵 📸...",
+          "comment": [
+            {
+              "id": 1,
+              "userName": "wecode",
+              "comment": "Welcome to world best coding bootcamp!",
+              "isLiked": true
+            },
+            {
+              "id": 2,
+              "userName": "joonsikyang",
+              "comment": "Hi there.",
+              "isLiked": false
+            },
+            {
+              "id": 3,
+              "userName": "jayPark",
+              "comment": "Hey.",
+              "isLiked": false
+            }
+          ]
+        }
       }
     }
   ]
