@@ -13,33 +13,12 @@ function Main() {
   useEffect(() => {
     fetch('http://localhost:3000/data/feed.json', {
       method: 'GET',
-      // GET method는 기본값이라서 생략이 가능합니다.
-    }) // 예시코드에서는 이해를 돕기 위해 명시적으로 기입해뒀습니다.
+    })
       .then(res => res.json())
       .then(data => {
-        setFeed(data.item); //item으로 받아오는 이유는 json파일 배열 이름이 item임
+        setFeed(data.item);
       });
   }, []);
-  // 원래코드 //
-
-  // const handleReviewInput = event => {
-  //   setComment(event.target.value); // 인풋값 계속 리로드
-  // };
-
-  // const handleTotalEnter = e => {
-  //   e.preventDefault();
-
-  //   // const plusArray = [...commentArrary]; // 지금까지 배열을 저장한다.
-  //   // plusArray.push({ id: '_heejuun_', comment: comment }); // 빈 값이 아니면  plusArray에 푸쉬한다
-  //   if (comment.trim() !== '') {
-  //     setCommentArray(prev => [
-  //       ...prev,
-  //       { id: Date.now(), comment: comment, userName: '_heejun_' },
-  //     ]);
-  //     // setCommentArray(plusArray); // 새로운 값으로 저장한다.
-  //   }
-  //   setComment(''); // 이미 저장된 댓글은 지운다.
-  // };
 
   return (
     <div className="wrap">
@@ -54,12 +33,7 @@ function Main() {
                 <FeedImg feedImg={item.feedsInfo} />
                 <FeedNav />
                 <FeedHeartCount />
-                <CommentWrap
-                  // onChange={handleReviewInput}
-                  // value={comment}
-                  arr={item.feedsInfo.article.comment}
-                  // onSubmit={handleTotalEnter}
-                />
+                <CommentWrap arr={item.feedsInfo.article.comment} />
               </article>
             </div>
           ))}
