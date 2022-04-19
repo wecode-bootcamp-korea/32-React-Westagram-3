@@ -8,11 +8,9 @@ const ImageSlide = ({ images }) => {
   const slideRef = useRef();
   const prevBtnRef = useRef();
   const nextBtnRef = useRef();
-  useEffect(() => {
-    setImgWidth(document.querySelector('.content_wrap li').clientWidth);
-  }, []);
 
   useEffect(() => {
+    setImgWidth(document.querySelector('.content_wrap li').clientWidth);
     setSlideX(-(imgWidth * imgNum));
     imgNum === 0
       ? prevBtnRef.current.classList.add('hidden')
@@ -61,4 +59,4 @@ const ImageSlide = ({ images }) => {
   );
 };
 
-export default React.memo(ImageSlide);
+export default ImageSlide;

@@ -12,7 +12,7 @@ const ContentsWrap = ({ data }) => {
     setDescrip(
       data.description
         .split('\n')
-        .map((line, i) => line || <div key={i}>{line}</div>)
+        .map((line, i) => (i === 0 && line) || <div key={i}>{line}</div>)
     );
     setHidden('hidden');
   };
