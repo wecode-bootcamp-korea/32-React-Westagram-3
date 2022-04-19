@@ -3,19 +3,15 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  // 로그인 버튼 클릭시 메인 이동
-
   const navigate = useNavigate();
 
   const goToMain = () => {
     navigate('/main-heejun');
   };
 
-  // 이메일 , 비밀번호 저장
   const [email, setEamli] = useState('');
   const [password, setPassWord] = useState('');
 
-  // 버튼 활성화 비활성화
   const [disabled, setDisabled] = useState(true);
 
   const handleIdInput = e => {
@@ -25,14 +21,15 @@ const Login = () => {
     setPassWord(e.target.value);
   };
 
-  // 아이디 비밀번호 검증 조건
-
   const [isActive, setIsActive] = useState(false);
 
   const isPassedLogin = () => {
-    return email.includes('@') && password.length > 4
-      ? (setIsActive(true), setDisabled(false))
+    email.includes('@') && password.length > 4
+      ? setIsActive(true)
       : setIsActive(false);
+    email.includes('@') && password.length > 4
+      ? setDisabled(false)
+      : setDisabled(true);
   };
 
   return (

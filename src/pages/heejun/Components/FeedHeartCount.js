@@ -9,10 +9,7 @@ export default function FeedHeartCount() {
           src="/images/heejun/IMG_0812.JPG"
         />
       </div>
-      <span>___e.be</span>
-      <span>님</span>
-      <span>외 43명</span>
-      <span>이 좋아합니다</span>
+      <span>___e.be 님 외 43명이 좋아합니다.</span>
     </div>
   );
 }
