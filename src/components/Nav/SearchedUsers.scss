@@ -1,0 +1,13 @@
+.searchedUsers {
+  .searchedUser-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .searchedUser-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+}

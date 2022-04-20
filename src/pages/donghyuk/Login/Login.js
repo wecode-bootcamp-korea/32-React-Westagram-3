@@ -13,14 +13,27 @@ const Login = () => {
     const idValue = idRef.current.value;
     const pwdValue = pwdRef.current.value;
 
-    idValue.includes('@') && pwdValue.length >= 5
+    // idValue.includes('@') && pwdValue.length >= 5
+    //   ? setValidation(true)
+    //   : setValidation(false);
+    idValue.length >= 6 && pwdValue.length >= 6
       ? setValidation(true)
       : setValidation(false);
   };
 
   const onSubmit = e => {
     e.preventDefault();
-    validation ? setSubmitted(true) : setSubmitted(false);
+    // validation ? setSubmitted(true) : setSubmitted(false);
+    validation &&
+      fetch('http://10.58.2.196:8000/users/signin', {
+        method: 'POST',
+        body: JSON.stringify({
+          email: idRef.current.value,
+          password: pwdRef.current.value,
+        }),
+      })
+        .then(res => res.json())
+        .then(result => console.log(result));
   };
 
   return validation && submitted ? (

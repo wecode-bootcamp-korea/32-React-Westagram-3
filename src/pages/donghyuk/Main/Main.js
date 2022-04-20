@@ -14,7 +14,7 @@ const Main = props => {
 
   return (
     <>
-      <Navbar />
+      <Navbar feeds={feeds} />
       <div className="main-container">
         {feeds.map(item => (
           <MainFeeds key={item.feedId} feedInfo={item.feedInfo} />

@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import SearchedUsers from './SearchedUsers';
 import './Nav.scss';
 
-const Nav = () => {
+const Nav = ({ feeds }) => {
+  const [searchedUsers, setSearchedUsers] = useState(null);
+  const users = feeds.map(feed => feed.feedInfo.profile);
+
+  const handleInput = e => {
+    const searchInputValue = e.target.value;
+    searchInputValue === ''
+      ? setSearchedUsers(null)
+      : setSearchedUsers(
+          users.filter(user => user.userName.includes(e.target.value))
+        );
+  };
+
   return (
     <nav className="navBar">
       <div className="navBar-container">
@@ -13,7 +26,23 @@ const Nav = () => {
           <span className="navBar-title">Westagram</span>
         </div>
         <div className="navBar-center">
-          <input type="text" className="navBar-search" placeholder="🔍 검색" />
+          <input
+            onChange={handleInput}
+            type="text"
+            className="navBar-search"
+            placeholder="🔍 검색"
+          />
+          {searchedUsers && (
+            <ul
+              className={`navBar-searchedUsersList ${
+                searchedUsers ? 'active' : ''
+              }`}
+            >
+              {searchedUsers.map((user, index) => (
+                <SearchedUsers key={index} user={user} />
+              ))}
+            </ul>
+          )}
         </div>
         <div className="navBar-right">
           <button className="navBar-compass">

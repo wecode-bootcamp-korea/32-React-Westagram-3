@@ -41,6 +41,7 @@ ul {
   .navBar-left,
   .navBar-center,
   .navBar-right {
+    position: relative;
     display: flex;
     align-items: center;
     width: 33%;
@@ -85,6 +86,25 @@ ul {
       text-align: center;
       color: #00000080;
     }
+  }
+
+  .navBar-searchedUsersList {
+    position: absolute;
+    top: 27px;
+    width: 100%;
+    padding: 8px 12px;
+    border: 2px solid #eaeaea;
+    background-color: white;
+    visibility: hidden;
+    z-index: 1;
+  }
+
+  .navBar-searchedUsersList.active {
+    visibility: visible;
+  }
+
+  .navBar-searchedUsers {
+    margin-top: 6px;
   }
 
   .navBar-right {

@@ -31,7 +31,6 @@ const Article = ({ profileInfo: { userName }, feedInfo }) => {
       <img src={feedInfo.articlImgUrl} alt="" className="article-img" />
       <FeedIconBar />
       <FeedLikeBar />
-      {/* <FeedContent onDelete={onDelete} comments={feedInfo.comment} /> */}
       <FeedContent
         onDelete={onDelete}
         feedInfo={feedInfo}
