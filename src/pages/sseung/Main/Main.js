@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Nav from '../../../components/Nav/Nav';
+// import Nav from '../../../components/Nav/Nav';
+import Nav from './Nav';
 
 import Feed from './Feed';
 import './Main.scss';
@@ -7,7 +8,7 @@ import MainRight from './MainRight';
 import StoriesWrap from './StoriesWrap';
 
 const Main = () => {
-  const [myData, setMyData] = useState(null);
+  const [myData, setMyData] = useState({});
 
   useEffect(() => {
     fetch('http://localhost:3000/data/myData.json')
@@ -18,9 +19,9 @@ const Main = () => {
 
   return (
     <div>
-      <Nav />
+      <Nav myData={myData.userData} />
       <main>
-        {myData && (
+        {myData.feedData && (
           <div>
             <section className="feeds">
               <StoriesWrap storyData={myData.storyData} />

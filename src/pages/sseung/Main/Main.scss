@@ -14,6 +14,7 @@
   }
 }
 
+/*
 nav {
   position: fixed;
   width: 100vw;
@@ -179,10 +180,178 @@ nav {
     }
   }
 }
+*/
+
+nav {
+  position: fixed;
+  width: 100vw;
+  height: 60px;
+  padding: 0 20px;
+  background-color: #fff;
+  border-bottom: 1px solid var(--color--lightgray) !important;
+  z-index: 100;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 935px;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .main_logo {
+    width: calc((100% - 268px) / 2);
+    h1 {
+      font-family: 'Lobster', cursive;
+      font-size: 2em;
+    }
+  }
+
+  .search_bar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .userSearch_wrap {
+      position: absolute;
+      top: 50px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+      > p {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: calc(100% / 2 + 5px);
+        transform: rotate(45deg);
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-right: 0;
+        border-bottom: 0;
+      }
+
+      .myInfo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 355px;
+        margin: 18px 0 10px;
+
+        .user_profile {
+          display: flex;
+          align-items: center;
+          .user_img {
+            margin-right: 12px;
+            @include user_profile(
+              $width: 44px,
+              $radius: 22px,
+              $padding: 0px,
+              $stroke: 0px
+            );
+            img {
+              width: 100%;
+              border-radius: 29px;
+            }
+          }
+
+          p,
+          span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+
+          p {
+            font-weight: bold;
+          }
+
+          span {
+            color: var(--color--gray);
+            font-size: 0.9em;
+          }
+        }
+        .remove {
+          cursor: pointer;
+          color: var(--color--gray);
+        }
+      }
+    }
+
+    .search_input {
+      width: 268px;
+      height: 36px;
+      padding: 3px 16px;
+      background-color: rgb(239, 239, 239);
+      border: none;
+      border-radius: 5px;
+    }
+
+    .search_input.not_focus {
+      position: absolute;
+      display: none;
+      // display: flex;
+      align-items: center;
+      height: 36px;
+      color: var(--color--gray);
+
+      .serch_icon {
+        margin-right: 10px;
+      }
+
+      p {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .reset {
+          position: relative;
+          top: 0px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .nav_btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc((100% - 268px) / 2);
+
+    i,
+    img {
+      width: 24px;
+      height: 24px;
+      margin-left: 20px;
+      cursor: pointer;
+    }
+
+    i::before {
+      position: relative;
+      top: 12px;
+    }
+
+    .profile_img {
+      border-radius: 12px;
+    }
+  }
+}
 
 main {
   padding-top: 90px;
   width: 100vw;
+  background-color: rgb(250, 250, 250);
 
   > div {
     position: relative;
@@ -197,9 +366,14 @@ main {
     align-items: center;
     width: 614px;
     height: 120px;
-    overflow: hidden;
+    // overflow: hidden;
+    overflow-x: scroll;
     border: 1px solid var(--color--lightgray);
     background-color: #fff;
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
 
     .stories {
       display: flex;
@@ -559,6 +733,8 @@ main {
       }
     }
     button {
+      border: none;
+      background: none;
       font-weight: 600;
       color: #0095f6;
       word-break: keep-all;

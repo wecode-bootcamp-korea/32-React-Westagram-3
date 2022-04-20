@@ -38,6 +38,22 @@ const LoginWrap = ({ user }) => {
   const goToMain = e => {
     e.preventDefault();
 
+    // fetch('http://10.58.0.177:8000/users/signin', {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     email: state.id,
+    //     password: state.pw,
+    //     name: '승이',
+    //     phone_number: '010-9253-8828',
+    //   }),
+    // })
+    //   .then(response => response.json())
+    //   .then(result => {
+    //     console.log('결과: ', result);
+    //     navigate('/main-sseung');
+    //   })
+    //   .catch(err => console.error(err));
+
     if (idCheck && pwCheck) {
       navigate('/main-sseung');
     } else {
