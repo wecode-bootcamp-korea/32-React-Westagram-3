@@ -1,0 +1,76 @@
+{
+  "item": [
+    {
+      "feedsId": "1",
+      "feedsInfo": {
+        "header": {
+          "headerId": "_heejun_",
+          "headerUrl": "../images/heejun/IMG_0813.JPG"
+        },
+        "pic": {
+          "picUrl": "../images/heejun/97BD93F8-9568-4F88-B209-FD72E61BED7C.JPG"
+        },
+        "article": {
+          "userName": "_heejuun_",
+          "content": "아르떼 뮤지엄에서 찰칵 📸...",
+          "comment": [
+            {
+              "id": 1,
+              "userName": "wecode",
+              "comment": "Welcome to world best coding bootcamp!",
+              "isLiked": true
+            },
+            {
+              "id": 2,
+              "userName": "joonsikyang",
+              "comment": "Hi there.",
+              "isLiked": false
+            },
+            {
+              "id": 3,
+              "userName": "jayPark",
+              "comment": "Hey.",
+              "isLiked": false
+            }
+          ]
+        }
+      }
+    },
+    {
+      "feedsId": "2",
+      "feedsInfo": {
+        "header": {
+          "headerId": "_heejun_",
+          "headerUrl": "../images/heejun/IMG_0813.JPG"
+        },
+        "pic": {
+          "picUrl": "../images/heejun/FC6C3584-448C-494E-BDDA-D9322A97ACA6.JPG"
+        },
+        "article": {
+          "userName": "_heejuun_",
+          "content": "아르떼 뮤지엄에서 찰칵 📸...",
+          "comment": [
+            {
+              "id": 1,
+              "userName": "wecode",
+              "comment": "Welcome to world best coding bootcamp!",
+              "isLiked": true
+            },
+            {
+              "id": 2,
+              "userName": "joonsikyang",
+              "comment": "Hi there.",
+              "isLiked": false
+            },
+            {
+              "id": 3,
+              "userName": "jayPark",
+              "comment": "Hey.",
+              "isLiked": false
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

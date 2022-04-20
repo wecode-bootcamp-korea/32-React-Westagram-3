@@ -1,0 +1,29 @@
+.feed-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+
+  .feed-nav-left {
+    margin-left: 10px;
+    .fa-heart {
+      margin-right: 10px;
+      color: red;
+      font-size: 20px;
+    }
+
+    .fa-comment {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    .fa-arrow-up-from-bracket {
+      font-size: 20px;
+    }
+  }
+
+  .fa-bookmark {
+    margin-right: 20px;
+    font-size: 20px;
+  }
+}
