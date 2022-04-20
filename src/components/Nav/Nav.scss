@@ -97,10 +97,10 @@ ul {
     background-color: white;
     visibility: hidden;
     z-index: 1;
-  }
 
-  .navBar-searchedUsersList.active {
-    visibility: visible;
+    &.active {
+      visibility: visible;
+    }
   }
 
   .navBar-searchedUsers {
