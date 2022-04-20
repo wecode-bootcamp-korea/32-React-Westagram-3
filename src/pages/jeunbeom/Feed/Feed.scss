@@ -1,38 +1,38 @@
 .page {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: stretch;
+  padding-top: 100px;
 
   .profile {
-    width: 500px;
-    height: 100vh;
+    width: 40vw;
+    height: max-content;
     border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
 
     .feedImg {
       width: 100%;
-      height: 600px;
-      object-fit: cover;
-      display: inline-flex;
+      height: 500px;
+      object-fit: contain;
     }
     .id {
       height: 50px;
       display: flex;
       align-items: center;
+      justify-content: space-evenly;
 
       .fa-circle {
         font-size: 30px;
-        margin-left: 15px;
+        margin-left: 10px;
       }
       .userid {
         font-size: 20px;
-        margin-left: 5px;
+        margin-left: 10px;
       }
       .dots {
-        margin-left: 330px;
         font-size: 30px;
+        margin-left: auto;
+        margin-right: 10px;
       }
     }
     .icons {
@@ -80,24 +80,18 @@
     }
     .commentbox1 {
       display: flex;
+      flex-direction: row;
       justify-content: center;
-      align-items: stretch;
-      margin: 0;
-      padding: 0;
-      height: 15px;
 
       .commentId {
         font-weight: bold;
-        list-style: none;
+        margin-left: 30px;
       }
-      .commentText {
-        padding-left: 10px;
-        display: flex;
-      }
+
       .seemore {
-        padding-left: 140px;
         color: lightgray;
         font-size: 13px;
+        margin-right: auto;
       }
       .userCommentList {
         margin: 0;
@@ -139,7 +133,7 @@
         color: lightblue;
         opacity: 0.8;
         border: none;
-        background-color: white;
+        background: transparent;
         margin: 0 auto;
         position: absolute;
         right: 5px;

@@ -7,8 +7,17 @@ function Login() {
   const navigate = useNavigate();
 
   const onClickButton = () => {
-    navigate('../main-jeunbeom');
-    //() => {navigate('/main')}
+    fetch('http://10.58.6.73:8000/users/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: id,
+        password: pw,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log('결과: ', result));
+    //navigate('../main-jeunbeom');
+    //() =>{navigate('/main')}
   };
   const [id, setId] = useState('');
   const [pw, setPw] = useState('');
@@ -47,7 +56,7 @@ function Login() {
                 />
                 <button
                   className="loginBtn"
-                  type="submit"
+                  type="button"
                   disabled={checkValidation}
                   onClick={onClickButton}
                 >

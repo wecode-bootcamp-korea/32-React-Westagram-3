@@ -1,18 +1,16 @@
 [
   {
     "id": 1,
-    "userId": "beom_pie",
+    "userName": "WEEE-",
     "feedImg": "../images/jeunbeom/dog.jpg",
     "firstLiker": "wecode",
-    "likeCounter": 1000,
-    "feedCommentList": []
+    "likeCounter": 1000
   },
   {
     "id": 2,
-    "userName": "beom_pie",
+    "userName": "BEOM-",
     "feedImg": "../images/jeunbeom/cat.jpg",
     "firstLiker": "sueboi",
-    "likeCounter": 10,
-    "feedCommentList": []
+    "likeCounter": 10
   }
 ]
