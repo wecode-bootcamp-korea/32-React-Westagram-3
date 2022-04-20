@@ -1,0 +1,177 @@
+.page-right {
+  width: 30vw;
+  height: 195vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  p {
+    margin: 0;
+  }
+
+  .idInfo {
+    width: 90%;
+    height: 100px;
+    border: 1px solid lightgray;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+    .house {
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+    .profileContainer {
+      display: flex;
+      flex-direction: column;
+    }
+    .profileTop {
+      margin-top: 30px;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .profileBottom {
+      margin-left: 5px;
+    }
+  }
+
+  .story {
+    width: 90%;
+    height: 300px;
+    margin-left: 15px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .storyuser {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+
+      .seestory {
+        margin-left: 10px;
+        margin-top: 10px;
+        color: lightgray;
+        font-size: 13px;
+      }
+
+      .storyseeall {
+        margin-right: 10px;
+        margin-top: 10px;
+        height: 30px;
+        font-size: 13px;
+      }
+    }
+    .friendContainer {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin-right: auto;
+      margin-bottom: 10px;
+
+      .id-top {
+        margin-left: 10px;
+      }
+      .id-bottom {
+        margin-left: 15px;
+        font-size: 10px;
+      }
+      .friend1 {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        border: 1px solid red;
+        padding: 1px;
+        margin-left: 15px;
+      }
+      .id-top {
+        font-size: 23px;
+        margin-top: 5px;
+        font-weight: bold;
+      }
+      .id-bottom {
+        font-size: 13px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .recommendation {
+    width: 90%;
+    height: 200px;
+    margin-left: 15px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+    .recommendationuser {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+
+      .client {
+        margin-left: 10px;
+        margin-top: 10px;
+        color: lightgray;
+        font-size: 13px;
+      }
+
+      .clientseeall {
+        margin-right: 10px;
+        margin-top: 10px;
+        height: 30px;
+        font-size: 13px;
+      }
+    }
+    .recommendFollow {
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .recommendFriend {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        border: 1px solid red;
+        padding: 1px;
+        margin-left: 15px;
+      }
+    }
+    .mightknowUser {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+
+      .knowuser {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .whoLikes {
+        font-size: 15px;
+      }
+    }
+    .follow {
+      margin-left: auto;
+      margin-right: 10px;
+      font-size: 10px;
+      color: blue;
+      font-weight: bold;
+    }
+  }
+}

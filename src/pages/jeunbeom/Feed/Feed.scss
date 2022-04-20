@@ -1,0 +1,144 @@
+.page {
+  display: flex;
+  flex-direction: row;
+  padding-top: 100px;
+
+  .profile {
+    width: 40vw;
+    height: max-content;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+
+    .feedImg {
+      width: 100%;
+      height: 500px;
+      object-fit: contain;
+    }
+    .id {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      .fa-circle {
+        font-size: 30px;
+        margin-left: 10px;
+      }
+      .userid {
+        font-size: 20px;
+        margin-left: 10px;
+      }
+      .dots {
+        font-size: 30px;
+        margin-left: auto;
+        margin-right: 10px;
+      }
+    }
+    .icons {
+      position: relative;
+      display: block;
+      height: 40px;
+
+      .lefticon {
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        font-size: 20px;
+
+        .fa-comment-dots {
+          margin-left: 5px;
+        }
+
+        .fa-share {
+          margin-left: 5px;
+        }
+      }
+      .righticon {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-size: 20px;
+      }
+    }
+    .likes {
+      margin-top: 10px;
+      height: 40px;
+      position: relative;
+
+      .fa-face-grin-squint {
+        position: absolute;
+        left: 20px;
+        font-size: 20px;
+      }
+
+      .howmanylikes {
+        position: absolute;
+        left: 50px;
+        font-size: 20px;
+      }
+    }
+    .commentbox1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      .commentId {
+        font-weight: bold;
+        margin-left: 30px;
+      }
+
+      .seemore {
+        color: lightgray;
+        font-size: 13px;
+        margin-right: auto;
+      }
+      .userCommentList {
+        margin: 0;
+      }
+    }
+    .userCommentList {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 65px;
+
+      .commentUserId {
+        font-weight: bold;
+        margin-right: 10px;
+      }
+    }
+
+    .addcomment {
+      position: relative;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      justify-content: center;
+      align-items: stretch;
+      margin-top: 50px;
+      padding: 0;
+
+      .toaddcomment {
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        border: none;
+        border-top: 1px solid lightgray;
+      }
+
+      .add {
+        font-size: 13px;
+        color: lightblue;
+        opacity: 0.8;
+        border: none;
+        background: transparent;
+        margin: 0 auto;
+        position: absolute;
+        right: 5px;
+        top: 15px;
+      }
+    }
+  }
+}

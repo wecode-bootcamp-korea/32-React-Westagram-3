@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "userName": "WEEE-",
+    "feedImg": "../images/jeunbeom/dog.jpg",
+    "firstLiker": "wecode",
+    "likeCounter": 1000
+  },
+  {
+    "id": 2,
+    "userName": "BEOM-",
+    "feedImg": "../images/jeunbeom/cat.jpg",
+    "firstLiker": "sueboi",
+    "likeCounter": 10
+  }
+]
