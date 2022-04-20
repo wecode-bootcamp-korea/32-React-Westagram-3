@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Components/CommentList.scss';
 
 export default function CommentList({ commentArray }) {
   return (

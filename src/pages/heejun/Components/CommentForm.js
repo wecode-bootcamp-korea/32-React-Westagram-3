@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../Components/CommentForm.scss';
 export default function CommentForm({ value, onChange, onSubmit }) {
   return (
     <form className="comment-action-wrap" onSubmit={e => onSubmit(e)}>

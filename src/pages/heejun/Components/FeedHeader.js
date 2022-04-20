@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../Components/FeedHeader.scss';
 export default function FeedHeader({ feedHeader: { header } }) {
   return (
     <div className="feed-header">

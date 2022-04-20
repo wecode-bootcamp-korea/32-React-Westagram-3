@@ -1,0 +1,17 @@
+.feed-header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid #f10a3c;
+  }
+
+  .feed-header-myName {
+    margin-left: 10px;
+    font-weight: 800;
+  }
+}

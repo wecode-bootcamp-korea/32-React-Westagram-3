@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../Components/FeedHeartCount.scss';
 export default function FeedHeartCount() {
   return (
     <div className="heart-count">

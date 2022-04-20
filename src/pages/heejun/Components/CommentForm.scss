@@ -1,0 +1,23 @@
+.comment-action-wrap {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  margin-top: 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+
+  .comment-input {
+    width: 100%;
+    border: none;
+    background-color: #fafafa;
+  }
+  .comment-btn {
+    button {
+      width: 50px;
+      border: 0;
+      background-color: #fafafa;
+      color: #1b8bf5;
+      font-weight: 700;
+      opacity: 0.9;
+    }
+  }
+}

@@ -1,12 +1,31 @@
 import './Login.scss';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const navigate = useNavigate();
+  const goToMain = e => {
+    e.preventDefault();
 
-  const goToMain = () => {
-    navigate('/main-heejun');
+    fetch('http://10.58.2.64:8000/users/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: email,
+        password: password,
+        name: '희준',
+        contact: 'hi hi ! ',
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.message === 'SUCCESS') {
+          localStorage.setItem('token', result.access_token);
+          alert('로그인 성공!');
+          navigate('/main-heejun');
+        } else {
+          alert('틀림');
+        }
+      });
   };
 
   const [email, setEamli] = useState('');

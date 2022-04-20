@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CommentList from '../Components/CommentList';
 import CommentForm from './CommentForm';
+import '../Components/CommentWrap.scss';
 export default function CommentWrap({ arr }) {
   const [comment, setComment] = useState('');
   const [commentArray, setCommentArray] = useState(arr);

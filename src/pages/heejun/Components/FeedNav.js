@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Components/FeedNav.scss';
 
 export default function FeedNav() {
   return (
