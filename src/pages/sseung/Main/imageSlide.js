@@ -19,7 +19,7 @@ const ImageSlide = ({ images }) => {
     imgNum === images.length - 1
       ? nextBtnRef.current.classList.add('hidden')
       : nextBtnRef.current.classList.remove('hidden');
-  }, [imgNum]);
+  }, [imgNum, imgWidth]);
 
   const moveSlide = e => {
     let nowImgNum = imgNum;
