@@ -32,7 +32,7 @@ const Comment = props => {
         className="add_comment"
       >
         <div className="comment_right">
-          <div className="nickname">jhw</div>
+          <div className="nickname">wkdguddnjs</div>
           <div className="inputValue">{x.content}</div>
         </div>
         <div className="comment_button">

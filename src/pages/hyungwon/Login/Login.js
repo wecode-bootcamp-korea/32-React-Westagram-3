@@ -19,18 +19,38 @@ const Login = () => {
   };
 
   const isValidEmail = email.includes('@');
-  const isNotValidEmail = email.includes('!');
   const isValidPwd = password.length >= 5;
 
-  const getIsActive = isValidEmail && isValidPwd && !isNotValidEmail;
+  const getIsActive = isValidEmail && isValidPwd;
 
   const handleBtnValid = () => {
-    if (isValidPwd && isValidEmail && !isNotValidEmail) {
-      navigate('/main-hyungwon');
-    } else {
-      alert('이메일 및 비밀번호를 확인하세요');
-    }
+    fetch('http://10.58.4.4:8000/users/login', {
+      method: 'POST',
+      body: JSON.stringify({
+        email: inputValue.email,
+        password: inputValue.password,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.MESSAGE === 'LOGIN SUCCESS') {
+          localStorage.setItem('token', result.JWT_TOKEN);
+          alert('환영합니다!');
+          navigate('/main-hyungwon');
+        } else {
+          alert('이메일 및 비밀번호를 확인하세요!');
+        }
+      });
   };
+
+  // 기존 main 페이지 이동 함수
+  // const handleBtnValid = () => {
+  //   if (isValidPwd && isValidEmail && !isNotValidEmail) {
+  //     navigate('/main-hyungwon');
+  //   } else {
+  //     alert('이메일 및 비밀번호를 확인하세요');
+  //   }
+  // };
 
   return (
     <div className="westagram">
