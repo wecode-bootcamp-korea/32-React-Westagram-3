@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+main {
+  background-color: white;
+  margin-top: 80px;
+  top: 80px;
+  width: 935px;
+  display: flex;
+  justify-content: center;
+  .allfeeds {
+    display: flex;
+    flex-direction: column;
+  }
+}

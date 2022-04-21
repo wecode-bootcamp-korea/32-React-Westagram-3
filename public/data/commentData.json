@@ -1,0 +1,80 @@
+{
+  "item": [
+    {
+      "id": "rlaehdus",
+      "userName": "rlaehdus",
+      "userProfilePhoto": "https://images.unsplash.com/photo-1640320776367-78c085bc9a0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+      "FeedPhotoUrl": "https://images.unsplash.com/photo-1613714034012-7aca3ea92e35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+      "content": "아침 풍경",
+      "isLiked": true
+    },
+    {
+      "id": "love_119",
+      "userName": "love_119",
+      "userProfilePhoto": "https://images.unsplash.com/photo-1614158869448-f356117d6698?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80",
+      "FeedPhotoUrl": "https://images.unsplash.com/photo-1648196583053-422ece33dc25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+      "content": "커피 한잔",
+      "isLiked": false
+    },
+    {
+      "id": "o_brain",
+      "userName": "o_brain",
+      "userProfilePhoto": "https://images.unsplash.com/photo-1649244451448-797144294226?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+      "FeedPhotoUrl": "https://images.unsplash.com/photo-1650214206609-8ba2cc3fb61d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
+      "content": "we go.",
+      "isLiked": false
+    },
+    {
+      "id": "likeForest",
+      "userName": "likeForest",
+      "userProfilePhoto": "https://images.unsplash.com/photo-1650419260381-28e4bf578e31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1625&q=80",
+      "FeedPhotoUrl": "https://images.unsplash.com/photo-1650458091994-22fda5da2da2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80",
+      "content": "숲속 풍경",
+      "isLiked": true
+    },
+    {
+      "id": "ridebike",
+      "userName": "ridebike",
+      "userProfilePhoto": "https://images.unsplash.com/photo-1650347325248-5b3b173425da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2942&q=80",
+      "FeedPhotoUrl": "https://images.unsplash.com/photo-1650437106832-73abf0afda96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80",
+      "content": "자전거 타고 싶다",
+      "isLiked": true
+    },
+    {
+      "id": "rlaskfk",
+      "userName": "rlaskfk",
+      "userProfilePhoto": "https://images.unsplash.com/photo-1649301505070-606500806ace?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2075&q=80",
+      "FeedPhotoUrl": "https://images.unsplash.com/photo-1649490836231-f100b8a04510?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=770&q=80",
+      "content": "11번가?",
+      "isLiked": false
+    },
+    {
+      "id": "likeBooks",
+      "userName": "likeBooks",
+      "userProfilePhoto": "https://images.unsplash.com/photo-1649097051511-1c5fb0ba4764?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2075&q=80",
+      "FeedPhotoUrl": "https://images.unsplash.com/photo-1648050706364-0b116ca4f7ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1675&q=80",
+      "content": "책 읽고 싶다",
+      "isLiked": true
+    }
+  ],
+  "comment": [
+    {
+      "id": 1,
+      "userName": "wecode",
+      "content": "Welcome to world best coding bootcamp!",
+      "isLiked": true
+    },
+    {
+      "id": 2,
+      "userName": "joonsikyang",
+      "content": "Hi there.",
+      "isLiked": false
+    },
+    {
+      "id": 3,
+      "userName": "jayPark",
+      "content": "Hey.",
+      "isLiked": true
+    }
+  ]
+}
