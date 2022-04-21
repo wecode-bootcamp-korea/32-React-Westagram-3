@@ -6,24 +6,25 @@ import '../Comment/Comment.scss';
 const Comment = props => {
   const likeHeart = useRef();
   const deleteThis = useRef();
-  const [count, setCount] = useState(0);
+  const [like, setLike] = useState(false);
   const deleteComment = (e, index) => {
     if (index === parseInt(e.currentTarget.id)) {
       e.currentTarget.closest('.add_comment').remove();
     }
   };
 
-  const likeComment = (e, index) => {
-    setCount(count => count + 1);
-    if (index === parseInt(e.currentTarget.id)) {
-      if (count % 2 === 0) {
+  const addComment = props.fruit.map((x, indexFromMap) => {
+    const likeComment = e => {
+      setLike(() => {
+        if (like === false) return true;
+        else if (like === true) return false;
+      });
+      if (like === false) {
         e.target.src = '/images/hyungwon/heart1.png';
-      } else {
+      } else if (like === true) {
         e.target.src = '/images/hyungwon/heart.png';
       }
-    }
-  };
-  const addComment = props.fruit.map((x, indexFromMap) => {
+    };
     return (
       <li
         key={x.key}
@@ -56,6 +57,7 @@ const Comment = props => {
           >
             <img
               ref={likeHeart}
+              value={like}
               alt="comment_heart"
               src="/images/hyungwon/heart.png"
               className="comment_heart"

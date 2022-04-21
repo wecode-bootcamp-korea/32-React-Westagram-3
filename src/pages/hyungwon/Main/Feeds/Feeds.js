@@ -15,6 +15,13 @@ const Feeds = () => {
   const addFeeds =
     jsondata &&
     jsondata.item.map((x, index) => {
+      const ILikeThisFeed = () => {
+        if (x.isLiked === true) {
+          return '/images/hyungwon/heart1.png';
+        } else if (x.isLiked === false) {
+          return '/images/hyungwon/heart.png';
+        }
+      };
       return (
         <div key={index} className="feeds">
           <article className="article">
@@ -40,9 +47,10 @@ const Feeds = () => {
               <div className="activity_right">
                 <button>
                   <img
-                    src="/images/hyungwon/heart.png"
+                    src={ILikeThisFeed()}
                     alt="post_heart"
                     className="post_heart"
+                    id="post_heart"
                   />
                 </button>
                 <img

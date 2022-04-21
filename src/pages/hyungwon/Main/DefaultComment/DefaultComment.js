@@ -1,30 +1,24 @@
 import React from 'react';
-import { useState } from 'react';
 import { useRef } from 'react';
 import '../Comment/Comment.scss';
 
 const DefaultComment = props => {
   const likeHeart = useRef();
   const deleteThis = useRef();
-  const [count, setCount] = useState(0);
   const deleteComment = (e, index) => {
     if (index === parseInt(e.currentTarget.id)) {
       e.currentTarget.closest('.add_comment').remove();
     }
   };
 
-  const likeComment = (e, index) => {
-    setCount(count => count + 1);
-    if (index === parseInt(e.currentTarget.id)) {
-      if (count % 2 === 0) {
-        e.target.src = '/images/hyungwon/heart1.png';
-      } else {
-        e.target.src = '/images/hyungwon/heart.png';
-      }
-    }
-  };
-
   const jsonComment = props.commentList.map((x, indexFromMap) => {
+    const ILikeThisComment = () => {
+      if (x.isLiked === true) {
+        return '/images/hyungwon/heart1.png';
+      } else {
+        return '/images/hyungwon/heart.png';
+      }
+    };
     return (
       <li
         key={indexFromMap}
@@ -50,16 +44,11 @@ const DefaultComment = props => {
               className="delete_comment"
             />
           </button>
-          <button
-            id={indexFromMap}
-            onClick={e => {
-              likeComment(e, indexFromMap);
-            }}
-          >
+          <button id={indexFromMap}>
             <img
               ref={likeHeart}
               alt="comment_heart"
-              src="/images/hyungwon/heart.png"
+              src={ILikeThisComment()}
               className="comment_heart"
             />
           </button>
