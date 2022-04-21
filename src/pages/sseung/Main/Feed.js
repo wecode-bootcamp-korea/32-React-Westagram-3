@@ -10,8 +10,12 @@ const Feed = ({ data, userData }) => {
   const [commentText, setCommentText] = useState('');
 
   useEffect(() => {
-    commentList.map((item, index) => (item.id = index));
-  }, [commentList]);
+    const newList = commentList.map((item, index) => ({
+      ...item,
+      id: index,
+    }));
+    setCommentList(newList);
+  }, [commentList.length]);
 
   const onComment = e => {
     setCommentText(e.target.value);
