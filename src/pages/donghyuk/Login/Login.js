@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [validation, setValidation] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
   const idRef = useRef();
   const pwdRef = useRef();
   const navigate = useNavigate();
@@ -23,7 +22,8 @@ const Login = () => {
 
   const onSubmit = e => {
     e.preventDefault();
-    validation ? setSubmitted(true) : setSubmitted(false);
+    validation && navigate('/main-donghyuk');
+
     // validation &&
     //   fetch('http://10.58.2.196:8000/users/signin', {
     //     method: 'POST',
@@ -36,12 +36,10 @@ const Login = () => {
     //     .then(result => console.log(result));
   };
 
-  return validation && submitted ? (
-    navigate('/main-donghyuk')
-  ) : (
+  return (
     <div className="login">
       <header className="login-title">Westagram</header>
-      <form onSubmit={onSubmit} action="./main.html" className="login-form">
+      <form onSubmit={onSubmit} className="login-form">
         <input
           ref={idRef}
           onChange={hanldeInput}
