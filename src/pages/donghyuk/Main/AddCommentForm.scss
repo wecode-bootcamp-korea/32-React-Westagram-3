@@ -1,0 +1,31 @@
+.addForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 6px 18px;
+
+  .addForm-input {
+    width: 520px;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 6px 0;
+    border: none;
+    outline: none;
+  }
+
+  .addForm-button {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0095f6;
+    transition: color 200ms ease-in;
+
+    &.disable {
+      color: #c4e1fb;
+    }
+
+    &:hover {
+      color: #0095f7;
+    }
+  }
+}

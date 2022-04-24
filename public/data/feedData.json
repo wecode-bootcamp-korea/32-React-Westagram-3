@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "feedId": 1,
+      "feedInfo": {
+        "post": "댕댕이🐶",
+        "articlImgUrl": "images/donghyuk/덕순1.jpg",
+        "profile": {
+          "url": "images/donghyuk/덕순1.jpg",
+          "userName": "gel_fos"
+        },
+        "comment": [
+          {
+            "commentId": 1,
+            "userName": "muumimi_",
+            "content": "덕순이 너무 귀엽다~🧡",
+            "isLiked": true
+          },
+          {
+            "commentId": 2,
+            "userName": "tjc_dew",
+            "content": "💝🤍❣️💕💗💞",
+            "isLiked": false
+          },
+          {
+            "commentId": 3,
+            "userName": "sang9jr",
+            "content": "주인 닮았네요!",
+            "isLiked": false
+          }
+        ]
+      }
+    },
+    {
+      "feedId": 2,
+      "feedInfo": {
+        "post": "정리",
+        "articlImgUrl": "https://images.unsplash.com/photo-1536329583941-14287ec6fc4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80",
+        "profile": {
+          "url": "https://images.unsplash.com/photo-1650221750572-8c4a1aec406c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80",
+          "userName": "doyu"
+        },
+        "comment": [
+          {
+            "commentId": 4,
+            "userName": "eommijin",
+            "content": "????????????",
+            "isLiked": true
+          },
+          {
+            "commentId": 5,
+            "userName": "dragon",
+            "content": "Hi there.",
+            "isLiked": false
+          },
+          {
+            "commentId": 6,
+            "userName": "gel_fos2",
+            "content": "Hey.",
+            "isLiked": false
+          }
+        ]
+      }
+    }
+  ]
+}
